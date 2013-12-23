@@ -242,6 +242,10 @@ header {
   -webkit-box-shadow: 0px 6px 12px #4d6180; /* webkit browser*/ -moz-box-shadow: 0px 6px 12px #4d6180;  /* firefox */ box-shadow: 0px 6px 12px #4d6180;
 }
 
+.vcard .fn, .vcard .title {
+  display: none;
+}
+
 .vcard .twitter {
   background-image: url(../img/icon_twitter_blue.png);
 }
@@ -362,7 +366,7 @@ ol#services li {
   line-height:40px;
 }
 
-.vcard > p:first-child{
+.vcard > .adr {
   margin:0;
   line-height:1.3em;
 }
