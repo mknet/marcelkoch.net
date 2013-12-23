@@ -246,23 +246,6 @@ header {
   display: none;
 }
 
-.vcard .twitter {
-  background-image: url(../img/icon_twitter_blue.png);
-}
-
-.vcard .adr {
-  background-image: url(../img/icon_pin_blue.png);
-  text-align: left;
-}
-
-.vcard .tel {
-  background-image: url(../img/icon_talk_blue.png);
-}
-
-.vcard .email {
-  background-image: url(../img/icon_at_blue.png);
-}
-
 .vcard .email span {
   display:none;
 }
@@ -355,20 +338,52 @@ ol#services li {
 
 }
 
-.vcard > p{
+.vcard > p {
   display: inline-block;
   margin: 0 0 0 1em;
   vertical-align:middle;
-  padding-left:50px;
   background-repeat: no-repeat;
   background-position: center left;
   height:40px;
   line-height:40px;
 }
 
+.vcard > p:before {
+  font-family: 'FontAwesome';
+  background: #0087b2;
+  color: #eee;
+  font-size: 35px;
+  padding: 5px;
+  border-radius: 12px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  text-align: center;
+  content: '\f061';
+  margin-right: 10px;
+}
+
 .vcard > .adr {
   margin:0;
   line-height:1.3em;
+}
+
+.vcard .adr:before {
+  content: "\f041";
+}
+
+.vcard .twitter:before {
+  content: "\f099";
+}
+
+.vcard .tel:before {
+  content: "\f095";
+}
+
+.vcard .email:before {
+  content: "@";
 }
 
 footer {
