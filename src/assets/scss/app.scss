@@ -1,0 +1,227 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+
+$mk-margin-factor: 3px;
+
+$mk-color-beige: #FDFCFB;
+$mk-color-darkbrown: #301700;
+$mk-color-darkviolett: #5E08AA;
+$mk-color-blue: #3168A8;
+
+$anchor-color: $mk-color-darkbrown;
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+body {
+  background-color: $mk-color-beige;
+  font-family: Jaldi-Regular, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  border: 8px solid #fff;
+}
+
+#header {
+  margin-bottom: 40 * $mk-margin-factor;
+
+  span {
+    display: block;
+    text-transform: lowercase;
+    letter-spacing: 1.3em;
+    margin-top: 0.5em;
+  }
+}
+
+#header, #menu, #search {
+  text-align: center;
+}
+
+#menu {
+  h2 {
+    font-size: 14px;
+    font-family: Jaldi-Bold;
+    margin-bottom: 3em;
+  }
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+  }
+
+  .software {
+    a:hover {
+      color: $mk-color-blue;
+    }
+  }
+
+  .lebenslauf {
+    a:hover {
+      color: $mk-color-darkviolett;
+    }
+  }
+
+  .menu-items-primary {
+    list-style: none;
+    display: inline;
+
+    > li {
+      padding-right: 20px;
+      line-height: 0.6;
+
+      > a,div {
+        display: block;
+        font-size: 48px;
+        font-family: Jaldi-Bold;
+      }
+    }
+  }
+
+
+
+  .menu-items-secondary {
+    height: 14px;
+    margin-left: 0;
+    li {
+      font-size: 16px;
+      font-family: Jaldi-Regular;
+      padding-right: 0;
+
+      &:after {
+        content: ',';
+      }
+
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+
+  .agile {
+    a:hover {
+      color: $mk-color-darkviolett;
+    }
+
+    .wide {
+      display: block;
+      letter-spacing: 33px;
+      line-height: 9px;
+      margin-bottom: 0;
+    }
+  }
+
+  .software {
+    .wide {
+      display: block;
+      letter-spacing: 6px;
+      line-height: 9px;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+#search {
+  margin-top: 5em;
+  h2 {
+    font-size: 14px;
+    font-family: Jaldi-Bold;
+  }
+
+  input {
+    border: 0;
+    -webkit-appearance:none;
+    box-shadow: none;
+    border-bottom: 1px solid $mk-color-darkbrown;
+    display: block;
+    font-family: Jaldi-Bold;
+    font-size: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    padding: 0;
+
+  }
+
+  button {
+    background-color: $mk-color-darkbrown;
+    color: $mk-color-beige;
+    padding: 1em;
+    border-radius: 3px;
+  }
+}
+
+.lebenslauf {
+  h1 {
+    padding: 0.5em 1em;
+    -ms-transform: rotate(-90deg);
+    transform: rotate(90deg);
+    -ms-transform-origin: 100% 0;
+    transform-origin: top left;
+    position: absolute;
+    background: $mk-color-darkviolett;
+    color: $mk-color-beige;
+    line-height: 40px;
+    //left: 88px;
+    top: 0;
+    width: 100vh;
+    font-family: Jaldi-Regular, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  }
+
+}
+
+.summary {
+  font-family: Jaldi-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  margin-bottom: 2em;
+  font-size: 24px;
+}
+
+.maintext {
+  font-size: 20px;
+}
