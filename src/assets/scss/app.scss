@@ -111,7 +111,7 @@ body {
 
     > li {
       padding-right: 20px;
-      line-height: 0.6;
+      line-height: 0.8;
 
       > a,div {
         display: block;
@@ -197,31 +197,5 @@ body {
   }
 }
 
-.lebenslauf {
-  h1 {
-    padding: 0.5em 1em;
-    -ms-transform: rotate(-90deg);
-    transform: rotate(90deg);
-    -ms-transform-origin: 100% 0;
-    transform-origin: top left;
-    position: absolute;
-    background: $mk-color-darkviolett;
-    color: $mk-color-beige;
-    line-height: 40px;
-    //left: 88px;
-    top: 0;
-    width: 100vh;
-    font-family: Jaldi-Regular, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  }
-
-}
-
-.summary {
-  font-family: Jaldi-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  margin-bottom: 2em;
-  font-size: 24px;
-}
-
-.maintext {
-  font-size: 20px;
-}
+@import 'components/lebenslauf';
+@import 'components/article';
