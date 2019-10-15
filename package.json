@@ -1,0 +1,12 @@
+{
+  "name": "marcelkoch.net-2019",
+  "version": "1.0.0",
+  "description": "marcelkoch.net, Version of 2019",
+  "scripts": {
+    "start": "parcel src/html/kommunikation.html",
+    "build": "parcel build src/html/kommunikation.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
