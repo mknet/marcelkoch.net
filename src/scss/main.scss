@@ -31,19 +31,31 @@ body {
 
 body > header {
 
+  a:link, a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--orange);
+  }
+
+  color: white;
+
+  font-size: 26px;
+
   grid-area: header;
 
   display: grid;
 
-  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-columns: 40px auto 400px 40px;
 
   grid-template-areas:
-  ". logo claim . .";
+  ". logo claim  .";
 
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px;
   background: var(--dark-purple);
 
   img {
