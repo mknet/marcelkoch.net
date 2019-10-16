@@ -1,0 +1,22 @@
+/* jaldi-regular - latin_latin-ext */
+@font-face {
+  font-family: 'Jaldi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Jaldi'), local('Jaldi-Regular'),
+    /* IE6-IE8 */ url('../fonts/Jaldi-Regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('../fonts/Jaldi-Regular.woff') format('woff');
+}
+/* jaldi-700 - latin_latin-ext */
+@font-face {
+  font-family: 'Jaldi';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Jaldi Bold'), local('Jaldi-Bold'),
+    /* IE6-IE8 */ url('../fonts/Jaldi-Bold.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('../fonts/Jaldi-Bold.woff') format('woff');
+}
