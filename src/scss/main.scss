@@ -75,4 +75,10 @@ body > footer {
   grid-area: footer;
 }
 
+#mknet__logo {
+  fill: white;
+}
+
+.fill-white { fill: white; }
+
 @import "stage";
