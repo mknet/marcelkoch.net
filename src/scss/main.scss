@@ -42,6 +42,13 @@ body::after {
   background-color: blue;
   grid-area: footerleft;
 }
+
+body q:first-of-type {
+  background: var(--dark-purple);
+  color: white;
+  grid-column: 1 / -1;
+  grid-row: 3;
+
 }
 
 body > header {
@@ -105,4 +112,5 @@ body > footer {
   content:"";
   background: green;
 }
+
 @import "stage";

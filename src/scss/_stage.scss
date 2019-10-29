@@ -1,8 +1,8 @@
 #stage {
-  background: white;
-  height: 400px;
   display: flex;
   flex-direction: column;
+  padding: 42px;
+  position: relative;
 
   p {
     margin: 0;
@@ -11,8 +11,16 @@
     width: 250px;
   }
 
+  nav {
+    font-size: 18px;
+  }
+
   header {
-    margin: 15% 0 0 25%;
+    margin: 15% 0 8% 25%;
+  }
+
+  section {
+    background: white;
   }
 
   ul {
@@ -23,9 +31,12 @@
   }
 
   a {
-    padding: 1em;
+    padding: 0.8em;
     border: 3px solid var(--orange);
-    border-radius: 12px;
+    border-radius: 18px;
+    width: 180px;
+    display: block;
+    text-align: center;
   }
 
   a:link, a:visited {
@@ -36,6 +47,7 @@
   a:hover {
     background: var(--orange);
     color: white;
+    border-color: var(--dark-purple);
   }
 
   a:link.coaching, a:visited.coaching {
@@ -43,8 +55,9 @@
     color: white;
   }
 
-  a:hover.coaching {
-    background: var(--dark-purple);
+  img {
+    width: 281px;
+    height: 248px;
   }
 }
 
@@ -52,4 +65,10 @@ h1 {
   font-size: 76px;
   color: var(--dark-purple);
   margin:0;
+}
+
+#photo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
