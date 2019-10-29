@@ -24,9 +24,24 @@ body {
   grid-template-columns: 40px 50px auto 50px 40px;
 
   grid-template-areas:
-  "header header header header header"
+  ". header header header headergutter"
   ". main main main ."
-  "footer footer footer footer footer";
+  ". quote quote quote ."
+  "footerleft footer footer footer footer";
+}
+
+body::before {
+  content: "";
+  background-color: blue;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+body::after {
+  content: "";
+  background-color: blue;
+  grid-area: footerleft;
+}
 }
 
 body > header {
@@ -81,4 +96,13 @@ body > footer {
 
 .fill-white { fill: white; }
 
+#bla {
+  background: var(--dark-purple);
+  grid-area: headergutter;
+}
+
+#footer::after {
+  content:"";
+  background: green;
+}
 @import "stage";
