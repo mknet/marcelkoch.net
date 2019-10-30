@@ -13,6 +13,10 @@
   "engines": {
     "node": ">=12.13.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mknet/marcelkoch.net.git"
+  },
   "devDependencies": {
     "basic-ftp": "^4.4.1",
     "cssnano": "^4.1.10",
