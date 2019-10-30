@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=12.13.0"
+  },
   "devDependencies": {
     "basic-ftp": "^4.4.1",
     "cssnano": "^4.1.10",
