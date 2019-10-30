@@ -10,6 +10,7 @@ deploy()
 
 async function deploy() {
     const client = new ftp.Client()
+    client.ftp.verbose = true
     try {
         await client.access({
             host: "koch.kasserver.com",
