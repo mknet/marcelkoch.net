@@ -25,8 +25,7 @@ body {
 
   grid-template-areas:
   ". header header header headergutter"
-  ". main main main ."
-  ". quote quote quote ."
+  "main main main main main"
   "footerleft footer footer footer footer";
 }
 
