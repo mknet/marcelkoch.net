@@ -45,9 +45,10 @@ body::after {
 body q:first-of-type {
   background: var(--dark-purple);
   color: white;
-  grid-column: 1 / -1;
-  grid-row: 3;
-
+  display: block;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5rem;
 }
 
 body > header {
