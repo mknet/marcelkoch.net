@@ -132,11 +132,13 @@ body > footer {
   section {
     background: white;
     margin-bottom: 20px;
+    display: flex;
 
     header {
       padding: 1em;
       display: flex;
       flex-direction: column-reverse;
+      flex-grow: 1;
 
       h3 {
         font-size: 34px;
@@ -158,6 +160,7 @@ body > footer {
       display: block;
       text-align: right;
       padding: 1em;
+      align-self: flex-end;
     }
   }
 }
