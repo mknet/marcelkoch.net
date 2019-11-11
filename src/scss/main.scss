@@ -25,7 +25,10 @@ body {
 
   grid-template-areas:
   ". header header header headergutter"
-  "main main main main main"
+  ". stage stage stage ."
+  "first-quote first-quote first-quote first-quote first-quote"
+  ". methods methods methods ."
+  "quote quote quote quote quote"
   "footerleft footer footer footer footer";
 }
 
@@ -49,6 +52,11 @@ body q:first-of-type {
   text-align: center;
   padding: 1em;
   font-size: 1.5rem;
+  grid-area: first-quote;
+}
+
+q {
+  grid-area: quote;
 }
 
 body > header {
@@ -89,8 +97,8 @@ body > header {
   }
 }
 
-main {
-  grid-area: main;
+#methods {
+  grid-area: methods;
 }
 
 body > footer {

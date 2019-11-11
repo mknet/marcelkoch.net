@@ -1,8 +1,24 @@
 #stage {
-  display: flex;
-  flex-direction: column;
-  padding: 42px;
-  position: relative;
+  grid-area: stage;
+  display: grid;
+  grid-template-columns: 6fr 1fr 150px;
+  grid-template-rows: 1fr 2fr 2fr 10px;
+  grid-gap: 44px;
+
+  section {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3
+  }
+  #photo {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2
+  }
+
+  #contact-info {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
 
   p {
     margin: 0;
@@ -58,6 +74,7 @@
   img {
     width: 281px;
     height: 248px;
+    display: block;
   }
 }
 
@@ -65,10 +82,4 @@ h1 {
   font-size: 76px;
   color: var(--dark-purple);
   margin:0;
-}
-
-#photo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
