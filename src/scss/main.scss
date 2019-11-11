@@ -34,14 +34,13 @@ body {
 
 body::before {
   content: "";
-  background-color: blue;
+  background-color: var(--dark-purple);
   grid-column: 1;
   grid-row: 1;
 }
 
 body::after {
   content: "";
-  background-color: blue;
   grid-area: footerleft;
 }
 
