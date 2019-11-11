@@ -8,6 +8,7 @@
   --green: #0A4460;
   --font: 'Jaldi', Helvetica, Verdana, sans-serif;
   --text-color: black;
+  --light-purple: #8D4CB9;
 }
 
 hr {
@@ -37,9 +38,9 @@ body {
   grid-template-areas:
   ". header header header headergutter"
   ". stage stage stage ."
-  "first-quote first-quote first-quote first-quote first-quote"
-  ". methods methods methods ."
   "quote quote quote quote quote"
+  ". methods methods methods ."
+  "quote2 quote2 quote2 quote2 quote2"
   "footerleft footer footer footer footer";
 }
 
@@ -57,16 +58,20 @@ body::after {
 
 body q:first-of-type {
   background: var(--dark-purple);
+  grid-area: quote;
+}
+
+body q:last-of-type {
+  background: var(--light-purple);
+  grid-area: quote2;
+}
+
+q {
   color: white;
   display: block;
   text-align: center;
   padding: 1em;
   font-size: 1.5rem;
-  grid-area: first-quote;
-}
-
-q {
-  grid-area: quote;
 }
 
 body > header {
