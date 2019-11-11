@@ -26,11 +26,13 @@ a:hover {
 body {
 
   font-family: Jaldi, sans-serif;
+  color: var(--dark-purple);
 
   background: var(--beige);
   margin: 0;
   display: grid;
   grid-template-columns: 40px 50px auto 50px 40px;
+
 
   grid-template-areas:
   ". header header header headergutter"
@@ -119,9 +121,45 @@ body > footer {
 
 .fill-white { fill: white; }
 
-#bla {
-  background: var(--dark-purple);
-  grid-area: headergutter;
+#methods {
+  h2 {
+    font-weight: normal;
+    font-size: 40px;
+    margin: 2em 0 1em 0;
+    text-align: center;
+  }
+
+  section {
+    background: white;
+    margin-bottom: 20px;
+
+    header {
+      padding: 1em;
+      display: flex;
+      flex-direction: column-reverse;
+
+      h3 {
+        font-size: 34px;
+        font-weight: normal;
+        margin: .2em 0;
+        margin-block-start: .2em;
+        margin-block-end: .2em;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+        color: var(--green);
+        font-weight: bold;
+      }
+    }
+
+    footer {
+      display: block;
+      text-align: right;
+      padding: 1em;
+    }
+  }
 }
 
 #footer::after {
