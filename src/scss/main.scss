@@ -25,6 +25,10 @@ a:hover {
 }
 
 body {
+  background: red;
+}
+
+body {
 
   font-family: Jaldi, sans-serif;
   color: var(--dark-purple);
@@ -32,16 +36,27 @@ body {
   background: var(--beige);
   margin: 0;
   display: grid;
-  grid-template-columns: 40px 50px auto 50px 40px;
-
+  grid-template-columns: 24px auto 24px;
 
   grid-template-areas:
-  ". header header header headergutter"
-  ". stage stage stage ."
-  "quote quote quote quote quote"
-  ". methods methods methods ."
-  "quote2 quote2 quote2 quote2 quote2"
-  "footerleft footer footer footer footer";
+  "headerleft header headerright"
+  "stageleft stage stageright"
+  "quote quote quote"
+  ". methods ."
+  "quote2 quote2 quote2"
+  "footerleft footer footerright";
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 40px 50px auto 50px 40px;
+
+    grid-template-areas:
+    ". header header header headergutter"
+    ". stage stage stage ."
+    "quote quote quote quote quote"
+    ". methods methods methods ."
+    "quote2 quote2 quote2 quote2 quote2"
+    "footerleft footer footer footer footer";
+  }
 }
 
 body::before {
@@ -98,9 +113,6 @@ body > header {
   grid-template-areas:
   ". logo claim  .";
 
-  top: 0;
-  left: 0;
-  width: 100%;
   background: var(--dark-purple);
 
   img {
