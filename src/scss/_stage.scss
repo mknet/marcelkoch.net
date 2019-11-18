@@ -5,6 +5,19 @@
   grid-template-rows: 1fr 2fr 2fr 10px;
   grid-gap: 26px;
 
+  @media screen and (min-width: 1200px) {
+    header {
+      margin: 15% 0 8% 25%;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      padding: 0;
+    }
+  }
+
   section {
     grid-column: 1 / span 2;
     grid-row: 1 / span 3;
@@ -13,9 +26,14 @@
       padding: 0.8em;
       border: 3px solid var(--orange);
       border-radius: 18px;
-      width: 180px;
+      width: 122px;
       display: block;
       text-align: center;
+
+      @media screen and (min-width: 1200px) {
+        width: 180px;
+      }
+
     }
 
     a:link, a:visited {
@@ -49,10 +67,15 @@
 
   nav {
     font-size: 18px;
-  }
 
-  header {
-    margin: 15% 0 8% 25%;
+    span {
+      display: none;
+
+      @media screen and (min-width: 1200px) {
+        display: inline;
+      }
+
+    }
   }
 
   section {
@@ -61,9 +84,23 @@
 
   ul {
     display: flex;
+    flex-direction: column;
     list-style: none;
-    justify-content: space-evenly;
-    padding: 0;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-evenly;
+      padding: 0;
+      flex-direction: row;
+    }
+
+  }
+
+  li {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+    }
   }
 
   img {
