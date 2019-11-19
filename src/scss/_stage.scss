@@ -5,9 +5,10 @@
 
   display: grid;
 
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 156px;
+  grid-template-rows: 1fr 1fr 151px 66px 1fr;
   overflow: hidden;
+  margin-top: 24px;
 
   @include xl {
     grid-template-columns: 6fr 1fr 150px;
@@ -31,9 +32,12 @@
     grid-row: 1/span 3;
     background: white;
 
+    padding: 0 12px;
+
     @include xl {
       grid-column: 1 / span 2;
       grid-row: 1 / span 3;
+      padding: initial;
     }
 
     a {
@@ -68,8 +72,8 @@
   }
 
   #photo {
-    grid-column: 4/span 2;
-    grid-row: 2/span 2;
+    grid-column: 4;
+    grid-row: 3/span 2;
 
     @include xl {
       grid-column: 2 / span 2;
@@ -125,8 +129,8 @@
 
   img {
     display: block;
-    width: 165px;
-    height: 146px;
+    width: 171px;
+    height: 151px;
 
     @include xl {
       width: 281px;
@@ -147,12 +151,15 @@ h1 {
 
 #contact-info {
   grid-column: 1 / colspan 5;
-  grid-row: 3;
+  grid-row: 4;
 
   color: white;
   background: var(--dark-purple);
 
   display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 12px;
 
   .name, .address {
     display: none;
@@ -180,16 +187,50 @@ h1 {
       display: block;
     }
     display: block;
-    margin: 1em 0;
+    margin: 0;
+    @include xl {
+      margin: 1em 0;
+    }
   }
 
   .freelance {
+    position: absolute;
+    top: -33px;
+    left: 12px;
+    color: var(--green);
+
+    @include xl {
+      position: initial;
+      top: initial;
+      left: initial;
+    }
+
+
     font-weight: bold;
     margin: .7em 0 .4em 0;
   }
 
   .tel {
     display: block;
-    margin-top: 1em;
+    width: 100%;
+    text-align: right;
+
+    a:link {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    @include xl {
+      width: initial;
+      text-align: initial;
+      margin-top: 1em;
+
+      a:link {
+        color: inherit;
+        font-weight: initial;
+        font-size: 1rem;
+      }
+    }
   }
 }
