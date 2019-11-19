@@ -1,5 +1,7 @@
 @use 'fonts';
 
+@import "responsive";
+
 :root {
   --dark-purple: #410B66;
   --orange: #BF4A1F;
@@ -36,11 +38,11 @@ body {
   background: var(--beige);
   margin: 0;
   display: grid;
-  grid-template-columns: 24px auto 24px;
+  grid-template-columns: 12px auto 12px;
 
   grid-template-areas:
   "headerleft header headerright"
-  "stageleft stage stageright"
+  "stageleft stage stage"
   "quote quote quote"
   ". methods ."
   "quote2 quote2 quote2"
@@ -102,16 +104,19 @@ body > header {
 
   color: white;
 
-  font-size: 26px;
-
   grid-area: header;
 
-  display: grid;
+  font-size: 18px;
 
-  grid-template-columns: 40px auto 400px 40px;
+  @include xl {
+    display: grid;
 
-  grid-template-areas:
-  ". logo claim  .";
+    grid-template-columns: 40px auto 400px 40px;
+
+    grid-template-areas:
+    ". logo claim  .";
+    font-size: 26px;
+  }
 
   background: var(--dark-purple);
 
