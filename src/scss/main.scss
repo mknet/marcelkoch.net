@@ -47,11 +47,16 @@ body {
   "quote quote quote"
   "footer footer footer";
 
+  > div {
+    grid-area: headerright;
+    background: var(--dark-purple);
+  }
+
   @media screen and (min-width: 1200px) {
     grid-template-columns: 40px 50px auto 50px 40px;
 
     grid-template-areas:
-    ". header header header headergutter"
+    ". header header header headerright"
     ". stage stage stage ."
     "quote quote quote quote quote"
     ". methods methods methods ."
