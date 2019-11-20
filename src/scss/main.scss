@@ -45,7 +45,7 @@ body {
   "stage stage stage"
   ". methods ."
   "quote quote quote"
-  "footerleft footer footerright";
+  "footer footer footer";
 
   @media screen and (min-width: 1200px) {
     grid-template-columns: 40px 50px auto 50px 40px;
@@ -139,6 +139,31 @@ body > header {
 
 body > footer {
   grid-area: footer;
+  background: #270042;
+  color: var(--beige);
+  padding: 0 12px;
+  margin-top: 3rem;
+
+  h2 {
+    display: none;
+  }
+
+  nav {
+    text-align: right;
+  }
+
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+  }
+
+  li {
+    margin-left: 1rem;
+  }
+
+  a:link {
+    color: var(--beige);
+  }
 }
 
 #mknet__logo {
