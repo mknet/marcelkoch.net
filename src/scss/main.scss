@@ -43,9 +43,8 @@ body {
   grid-template-areas:
   "headerleft header headerright"
   "stage stage stage"
-  "quote quote quote"
   ". methods ."
-  "quote2 quote2 quote2"
+  "quote quote quote"
   "footerleft footer footerright";
 
   @media screen and (min-width: 1200px) {
@@ -74,13 +73,22 @@ body::after {
 }
 
 body q:first-of-type {
-  background: var(--dark-purple);
   grid-area: quote;
+  background: var(--light-purple);
+
+  @include xl {
+    background: var(--dark-purple);
+  }
 }
 
 body q:last-of-type {
   background: var(--light-purple);
   grid-area: quote2;
+  display: none;
+
+  @include xl {
+    display: block;
+  }
 }
 
 q {
@@ -129,10 +137,6 @@ body > header {
   }
 }
 
-#methods {
-  grid-area: methods;
-}
-
 body > footer {
   grid-area: footer;
 }
@@ -144,6 +148,9 @@ body > footer {
 .fill-white { fill: white; }
 
 #methods {
+  grid-area: methods;
+  margin-bottom: 2rem;
+
   h2 {
     font-weight: normal;
     font-size: 40px;
