@@ -1,0 +1,6 @@
+@objects
+    header              css      body > header
+
+= Main section =
+    header:
+        height 79px
