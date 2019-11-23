@@ -1,0 +1,211 @@
+
+
+
+//
+// CSS FLIP BOX
+// --------------------------------------------------
+
+
+// vars size
+$box-width: 1000px;
+$box-height: 50px;
+$perspective: $box-width / 10;
+
+// vars colors
+$bg-color-front: #789e13;
+$bg-color-back: lighten($bg-color-front, 10%);
+$bg-color-flank: darken($bg-color-front, 10%);
+
+$bg-color-front-alternative: #931e83;
+$bg-color-back-alternative: lighten($bg-color-front-alternative, 10%);
+$bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
+
+
+// 2 extend
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.slice {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateZ(-($perspective / 2)) rotateX(180deg);
+  }
+  100% {
+    transform: translateZ(0) rotateX(0deg);
+  }
+}
+
+// flip box
+
+.flip-box {
+  float: left;
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: $box-width;
+  height: $box-height;
+  perspective: 400px;
+
+  .object {
+    @extend .full-size;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform-style: preserve-3d;
+    transform: translateZ(-($perspective / 2));
+
+    &:hover,
+    &:focus {
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+      transform: translateZ(-($perspective / 2)) rotateY(180deg);
+    }
+
+
+  }
+
+  .front {
+    @extend .full-size;
+    @extend .slice;
+    z-index: 1;
+    background-color: $bg-color-front;
+    transform: rotateY(0deg) translateZ(($perspective / 2));
+  }
+
+  .back {
+    @extend .full-size;
+    @extend .slice;
+    z-index: 0;
+    background-color: $bg-color-back;
+    transform: rotateY(180deg) translateZ(($perspective / 2));
+  }
+
+  .flank {
+    @extend .slice;
+    width: $perspective;
+    height: $box-height;
+    left: ($box-width - $perspective) / 2;
+    background-color: $bg-color-flank;
+    transform: rotateY(-90deg) translateZ(($box-width / 2));
+  }
+
+
+  // flip up
+  &.flip-up {
+
+    .object {
+
+      animation: 1s ease-out 0s 1 slideInFromLeft;
+
+      &:hover,
+      &:focus {
+        transform: translateZ(-($perspective / 2)) rotateX(180deg);
+      }
+
+    }
+
+    .back {
+      transform: rotateX(180deg) translateZ(($perspective / 2));
+    }
+
+    .flank {
+      width: $box-width;
+      height: $perspective;
+      left: 0;
+      top: (($box-height - $perspective) / 2 );
+      transform: rotateX(-90deg) translateZ(($box-height / 2));
+    }
+
+  }
+
+
+  // colors (just if you need them)
+
+  &.alternative {
+
+    .front {
+      background-color: $bg-color-front-alternative;
+    }
+
+    .back {
+      background-color: $bg-color-back-alternative;
+    }
+
+    .flank {
+      background-color: $bg-color-flank-alternative;
+    }
+
+  }
+
+}
+
+
+// FALLBACK
+// fallback for older browsers. needs modernizr which sets class 'no-csstransforms3d' to html-tag
+
+.no-csstransforms3d .flip-box {
+
+  .object {
+    position: relative;
+    overflow: hidden;
+    transform-style: none;
+
+    .back {
+      top: $box-width;
+      z-index: 0;
+      transition-property: top;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:hover .back {
+      top: 0;
+      z-index: 1;
+    }
+
+  }
+
+  .flank {
+    display: none;
+  }
+
+}
+
+
+/* Internet Explorer 10 only */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .object {
+    position: relative;
+    overflow: hidden;
+    transform: none !important;
+
+    .back {
+      top: $box-width;
+      z-index: 0;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+
+    }
+
+    &:hover .back {
+      top: 0;
+      z-index: 1;
+      transform: rotateY(0deg) translateZ(0);
+    }
+
+  }
+
+}

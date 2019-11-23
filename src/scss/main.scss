@@ -2,6 +2,8 @@
 
 @import "responsive";
 
+@import "flipbox";
+
 :root {
   --dark-purple: #410B66;
   --orange: #BF4A1F;
@@ -11,6 +13,13 @@
   --font: 'Jaldi', Helvetica, Verdana, sans-serif;
   --text-color: black;
   --light-purple: #8D4CB9;
+}
+
+#cookiebar {
+  position: absolute;
+  top: 0;
+  background: var(--orange);
+  color: var(--dark-purple);
 }
 
 hr {
