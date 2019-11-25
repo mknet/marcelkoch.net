@@ -7,9 +7,9 @@
 
 
 // vars size
-$box-width: 300px;
-$box-height: 200px;
-$perspective: $box-width / 2;
+$box-width: 100vw;
+$box-height: 100px;
+$perspective: 50px;
 
 // vars colors
 $bg-color-front: #789e13;
@@ -98,9 +98,9 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     @extend .slice;
     width: $perspective;
     height: $box-height;
-    left: ($box-width - $perspective) / 2;
+    left: 250px;
     background-color: $bg-color-flank;
-    transform: rotateY(-90deg) translateZ(($box-width / 2));
+    transform: rotateY(-90deg) translateZ(50vw);
   }
 
 
@@ -109,8 +109,6 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
     .object {
 
-      animation: 10s ease-out 0s 1 slideInFromLeft;
-      animation-iteration-count: infinite;
 
       &:hover,
       &:focus {
