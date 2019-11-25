@@ -7,7 +7,6 @@
 
 
 // vars size
-$box-width: 100vw;
 $box-height: 100px;
 $perspective: 50px;
 
@@ -54,7 +53,6 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
   display: block;
   position: relative;
   z-index: 2;
-  width: $box-width;
   height: $box-height;
   perspective: 400px;
 
@@ -109,6 +107,8 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
     .object {
 
+      animation: 10s ease-out 0s 1 slideInFromLeft;
+      animation-iteration-count: infinite;
 
       &:hover,
       &:focus {
@@ -122,7 +122,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     }
 
     .flank {
-      width: $box-width;
+      width: 100%;
       height: $perspective;
       left: 0;
       top: (($box-height - $perspective) / 2 );
@@ -164,7 +164,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     transform-style: none;
 
     .back {
-      top: $box-width;
+      top: 100%;
       z-index: 0;
       transition-property: top;
       transition-duration: 0.3s;
@@ -194,7 +194,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     transform: none !important;
 
     .back {
-      top: $box-width;
+      top: 100%;
       z-index: 0;
       transition-property: all;
       transition-duration: 0.3s;

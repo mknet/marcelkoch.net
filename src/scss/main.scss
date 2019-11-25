@@ -131,13 +131,15 @@ body > header {
   font-size: 18px;
 
   @include xl {
-    display: grid;
+    .flip-content {
+      display: grid;
 
-    grid-template-columns: 40px auto 400px 40px;
+      grid-template-columns: 40px auto 400px 40px;
 
-    grid-template-areas:
-    ". logo claim  .";
-    font-size: 26px;
+      grid-template-areas:
+      ". logo claim  .";
+      font-size: 26px;
+    }
   }
 
   background: var(--dark-purple);
