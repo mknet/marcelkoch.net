@@ -7,9 +7,9 @@
 
 
 // vars size
-$box-width: 1000px;
-$box-height: 50px;
-$perspective: $box-width / 10;
+$box-width: 300px;
+$box-height: 200px;
+$perspective: $box-width / 2;
 
 // vars colors
 $bg-color-front: #789e13;
@@ -37,10 +37,10 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
 @keyframes slideInFromLeft {
   0% {
-    transform: translateZ(-($perspective / 2)) rotateX(180deg);
+    transform: translateZ(0) rotateX(0deg);
   }
   100% {
-    transform: translateZ(0) rotateX(0deg);
+    transform: translateZ(-($perspective / 2)) rotateX(180deg);
   }
 }
 
