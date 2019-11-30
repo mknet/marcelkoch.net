@@ -142,6 +142,13 @@ body > header {
     }
   }
 
+  .flank-content {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3vw;
+  }
+
   background: var(--dark-purple);
 
   img {
@@ -203,7 +210,7 @@ body > footer {
     background: white;
     margin-bottom: 20px;
     display: flex;
-    transition-property: transform;
+    transition-property: transform, box-shadow;
     transition-duration: 0.5s;
 
     &:hover {

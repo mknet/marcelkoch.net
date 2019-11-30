@@ -11,9 +11,9 @@ $box-height: 100px;
 $perspective: 50px;
 
 // vars colors
-$bg-color-front: #789e13;
-$bg-color-back: lighten($bg-color-front, 10%);
-$bg-color-flank: darken($bg-color-front, 10%);
+$bg-color-front: #410B66;
+$bg-color-back: #FD722B;;
+$bg-color-flank: white;
 
 $bg-color-front-alternative: #931e83;
 $bg-color-back-alternative: lighten($bg-color-front-alternative, 10%);
@@ -68,7 +68,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     &:hover,
     &:focus {
       transition-property: transform;
-      transition-duration: 0.5s;
+      transition-duration: 1.5s;
       transition-timing-function: ease-in-out;
       transform: translateZ(-($perspective / 2)) rotateY(180deg);
     }
@@ -99,6 +99,11 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     left: 250px;
     background-color: $bg-color-flank;
     transform: rotateY(-90deg) translateZ(50vw);
+    color: #410B66;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 
@@ -108,7 +113,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     .object {
 
       animation: 10s ease-out 0s 1 slideInFromLeft;
-      animation-iteration-count: infinite;
+      // animation-iteration-count: infinite;
 
       &:hover,
       &:focus {
