@@ -13,6 +13,10 @@ coachingLink.addEventListener('click', function(e) {
   dialog.showModal();
 }, false);
 
+
+console.log('Bla'+cookie.get('mkCookie'))
+
+debugger;
 if (cookie.get(CONSENT_COOKIE)) {
   console.log('Cookie is already set')
 } else {
