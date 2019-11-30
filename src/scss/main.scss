@@ -151,6 +151,10 @@ body > header {
 
   background: var(--dark-purple);
 
+  .cookie-icon {
+    width: 80px;
+  }
+
   img {
     grid-area: logo;
   }
