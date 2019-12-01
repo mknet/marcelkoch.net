@@ -1,6 +1,8 @@
 import dialogPolyfill from 'dialog-polyfill/dist/dialog-polyfill.esm'
 import cookie from 'js-cookie'
 
+import DocReady from 'es6-docready'
+
 const CONSENT_COOKIE = 'mtm_consent'
 
 const dialog = document.querySelector('dialog');
@@ -15,12 +17,16 @@ coachingLink.addEventListener('click', function(e) {
 
 const header = document.querySelector('body > header > .object');
 
-if (cookie.get(CONSENT_COOKIE)) {
-  console.log('Cookie is already set')
-} else {
-  header.classList.add("cookie-bar");
-  console.log('Cookie has just been set')
-}
+DocReady( () => {
+  setTimeout(() => {
+    if (cookie.get(CONSENT_COOKIE)) {
+      console.log('Cookie is already set')
+    } else {
+      header.classList.add("cookie-bar");
+      console.log('Cookie has just been set')
+    }
+  }, 1000)
+} )
 
 
 const cookiesOkButton = document.querySelector('button[name=cookies-ok]');

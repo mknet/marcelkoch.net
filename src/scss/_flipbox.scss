@@ -67,7 +67,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
     &.cookie-bar {
       transition-property: transform;
-      transition-duration: 10s;
+      transition-duration: 2.5s;
       transition-timing-function: ease-in-out;
       transform: translateZ(-($perspective / 2)) rotateY(180deg);
     }
