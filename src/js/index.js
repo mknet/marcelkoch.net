@@ -13,16 +13,21 @@ coachingLink.addEventListener('click', function(e) {
   dialog.showModal();
 }, false);
 
+const header = document.querySelector('body > header > .object');
 
-console.log('Bla'+cookie.get('mkCookie'))
-
-debugger;
 if (cookie.get(CONSENT_COOKIE)) {
   console.log('Cookie is already set')
 } else {
-  _paq.push(['rememberConsentGiven', 1000]);
+  header.classList.add("cookie-bar");
   console.log('Cookie has just been set')
 }
 
 
-document.cookie = 'mkCookie=jo; expires=Wed, 31 Oct 2020 08:50:17 GMT;path=/';
+const cookiesOkButton = document.querySelector('button[name=cookies-ok]');
+cookiesOkButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  _paq.push(['rememberConsentGiven', 1000]);
+  header.classList.remove('cookie-bar')
+  const flankContentElement = document.querySelector('.flank-content');
+  flankContentElement.textContent='Vielen Dank!'
+})

@@ -65,10 +65,9 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     transform-style: preserve-3d;
     transform: translateZ(-($perspective / 2));
 
-    &:hover,
-    &:focus {
+    &.cookie-bar {
       transition-property: transform;
-      transition-duration: 1.5s;
+      transition-duration: 2s;
       transition-timing-function: ease-in-out;
       transform: translateZ(-($perspective / 2)) rotateY(180deg);
     }
@@ -112,11 +111,10 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
     .object {
 
-      animation: 10s ease-out 0s 1 slideInFromLeft;
+      // animation: 10s ease-out 0s 1 slideInFromLeft;
       // animation-iteration-count: infinite;
 
-      &:hover,
-      &:focus {
+      &.cookie-bar {
         transform: translateZ(-($perspective / 2)) rotateX(180deg);
       }
 
