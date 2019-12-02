@@ -271,7 +271,7 @@ body > footer {
 @import "stage";
 
 .kindle {
-  display: none;
+  display: inline;
 
   @media amzn-kf8 {
     display: block;
