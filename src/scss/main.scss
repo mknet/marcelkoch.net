@@ -271,9 +271,12 @@ body > footer {
 @import "stage";
 
 .kindle {
-  display: inline;
+  @media screen {
+    display: none;
+  }
 
-  @media amzn-kf8 {
+  @media not all {
     display: block;
   }
 }
+
