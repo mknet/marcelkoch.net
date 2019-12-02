@@ -139,6 +139,10 @@ body > header {
       grid-template-areas:
       ". logo claim  .";
       font-size: 26px;
+
+      &.cookiebar {
+        display: flex;
+      }
     }
   }
 
@@ -153,6 +157,7 @@ body > header {
 
   .cookie-icon {
     width: 80px;
+    height: 80px;
   }
 
   img {
@@ -264,3 +269,11 @@ body > footer {
 }
 
 @import "stage";
+
+.kindle {
+  display: none;
+
+  @media amzn-kf8 {
+    display: block;
+  }
+}
