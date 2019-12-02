@@ -275,7 +275,7 @@ body > footer {
     display: none;
   }
 
-  @media not all and (device-aspect-ratio:1/1) {
+  @media amzn-kf8 {
     display: block;
   }
 }
