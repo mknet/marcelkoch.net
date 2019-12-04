@@ -37,3 +37,11 @@ cookiesOkButton.addEventListener('click', (e) => {
   const flankContentElement = document.querySelector('.flank-content');
   flankContentElement.textContent='Vielen Dank!'
 })
+
+const cookiesNoButton = document.querySelector('button[name=cookies-no]');
+cookiesNoButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  header.classList.remove('cookie-bar')
+  const flankContentElement = document.querySelector('.flank-content');
+  flankContentElement.textContent='Sehr schade!'
+})
