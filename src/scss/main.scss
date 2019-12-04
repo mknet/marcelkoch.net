@@ -141,8 +141,67 @@ body > header {
       font-size: 26px;
 
       &.cookiebar {
-        display: flex;
+
       }
+    }
+  }
+
+  .flip-content {
+    &.cookiebar {
+      display: flex;
+      color: var(--dark-purple);
+      padding: 1rem;
+      align-items: center;
+
+    h2, p {
+      margin: 0;
+    }
+
+    header {
+      flex-grow: 2;
+    }
+
+    button {
+      border-radius: 12px;
+      font-size: 18px;
+      width: 60px;
+      height: 48px;
+      color: white;
+      background: transparent;
+      border: 3px solid white;
+      margin-right: 1rem;
+
+      &:focus, &:active {
+        outline: none;
+        background: var(--dark-purple);
+      }
+
+      &:active {
+        box-shadow: inset 3px 3px 3px 3px #000;
+        transform: scale(0.9);
+      }
+
+      &:hover {
+        border-color: var(--dark-purple);
+        cursor: pointer;
+      }
+
+      &[name=cookies-ok] {
+        color: var(--dark-purple);
+        background: white;
+
+        &:focus, &:active {
+          outline: none;
+          background: var(--dark-purple);
+          color: white;
+        }
+
+        &:active {
+          box-shadow: inset 3px 3px 3px 3px #000;
+          transform: scale(0.9);
+        }
+      }
+    }
     }
   }
 
@@ -158,6 +217,7 @@ body > header {
   .cookie-icon {
     width: 80px;
     height: 80px;
+    margin-right: 1rem;
   }
 
   img {
@@ -275,7 +335,25 @@ body > footer {
     display: none;
   }
 
-  @media amzn-kf8 {
+  @media amzn-mobi,
+  amzn-kf8
+  and (device-height:1024px)
+  and (device-width:  758px),
+  amzn-kf8
+  and (device-height:758px)
+  and (device-width:1024px),
+  amzn-kf8
+  and (device-height: 800px)
+  and (device-width: 600px),
+  amzn-kf8
+  and (device-height: 600px)
+  and (device-width: 800px),
+  amzn-kf8
+  and (device-height: 1448px)
+  and (device-width: 1072px),
+  amzn-kf8
+  and (device-height: 1072px)
+  and (device-width: 1448px) {
     display: block;
   }
 }
