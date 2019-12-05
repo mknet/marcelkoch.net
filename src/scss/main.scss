@@ -59,6 +59,10 @@ html {
 
 body {
 
+  &.no-cookie-decision {
+    overflow: hidden;
+  }
+
   font-family: Jaldi, sans-serif;
   color: var(--dark-purple);
 

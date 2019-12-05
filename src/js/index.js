@@ -45,3 +45,10 @@ cookiesNoButton.addEventListener('click', (e) => {
   const flankContentElement = document.querySelector('.flank-content');
   flankContentElement.textContent='Sehr schade!'
 })
+
+const body = document.querySelector('body');
+body.classList.add('no-cookie-decision');
+const flixBox = document.querySelector('.flip-box .object');
+flixBox.addEventListener('transitionend', function(e) {
+  body.classList.remove('no-cookie-decision');
+}, false);
