@@ -20,10 +20,8 @@ const header = document.querySelector('body > header > .object');
 DocReady( () => {
   setTimeout(() => {
     if (cookie.get(CONSENT_COOKIE)) {
-      console.log('Cookie is already set')
     } else {
       header.classList.add("cookie-bar");
-      console.log('Cookie has just been set')
     }
   }, 1000)
 } )
