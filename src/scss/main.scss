@@ -150,8 +150,28 @@ body > header {
     &.cookiebar {
       display: flex;
       color: var(--dark-purple);
-      padding: 1rem;
+      padding: .5rem;
       align-items: center;
+      flex-wrap: wrap;
+
+      @include xl {
+        padding: 1rem;
+        flex-wrap: initial;
+      }
+
+    h2 {
+      font-size: 24px;
+      @include xl {
+        font-size: 39px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      @include xl {
+        font-size: 24px;
+      }
+    }
 
     h2, p {
       margin: 0;
@@ -159,17 +179,28 @@ body > header {
 
     header {
       flex-grow: 2;
+      width: 213px;
+      @include xl {
+        width: unset;
+      }
     }
 
     button {
       border-radius: 12px;
-      font-size: 18px;
-      width: 60px;
-      height: 48px;
+      font-size: 12px;
+      width: 48px;
+      height: 33px;
       color: white;
       background: transparent;
       border: 3px solid white;
       margin-right: 1rem;
+      font-size: 15px;
+
+      @include xl {
+        font-size: 18px;
+        width: 60px;
+        height: 48px;
+      }
 
       &:focus, &:active {
         outline: none;
@@ -215,9 +246,15 @@ body > header {
   background: var(--dark-purple);
 
   .cookie-icon {
-    width: 80px;
-    height: 80px;
+    width: 47px;
+    height: 47px;
     margin-right: 1rem;
+    margin-bottom: .5rem;
+
+    @include xl {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   img {
