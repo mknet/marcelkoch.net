@@ -78,9 +78,14 @@ body {
   "quote quote quote"
   "footer footer footer";
 
-  > div {
+  > div:nth-of-type(1) {
     grid-area: headerright;
     background: var(--dark-purple);
+  }
+
+  > div:nth-of-type(2) {
+    grid-area: footerleft;
+    background: #270042;
   }
 
   @media screen and (min-width: 1200px) {
@@ -92,7 +97,7 @@ body {
     "quote quote quote quote quote"
     ". methods methods methods ."
     "quote2 quote2 quote2 quote2 quote2"
-    "footerleft footer footer footer footer";
+    "footerleft footer footer footer footerright";
   }
 }
 
@@ -121,6 +126,7 @@ body q:last-of-type {
   background: var(--light-purple);
   grid-area: quote2;
   display: none;
+  margin-bottom: 3rem;
 
   @include xl {
     display: block;
@@ -294,7 +300,6 @@ body > footer {
   background: #270042;
   color: var(--beige);
   padding: 0 12px;
-  margin-top: 3rem;
 
   h2 {
     display: none;
@@ -390,9 +395,10 @@ body > footer {
   }
 }
 
-#footer::after {
+body:after {
   content:"";
-  background: green;
+  background: #270042;
+  grid-area: footerright;
 }
 
 @import "stage";
