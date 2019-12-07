@@ -49,6 +49,7 @@ const moreLinks = document.querySelectorAll('#methoden a');
 
 moreLinks.forEach(moreLink => {
   moreLink.addEventListener('click', function(e) {
+    _paq.push(['trackEvent', 'link', 'methods', e.target.pathname])
     e.preventDefault();
     dialog.showModal();
   })
