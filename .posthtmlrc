@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "posthtml-link-noreferrer": {
+      "attr": ["noopener", "noreferrer"]
+    }
+  }
+}

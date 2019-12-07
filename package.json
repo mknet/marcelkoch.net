@@ -24,6 +24,7 @@
     "cssnano": "^4.1.10",
     "galenframework-cli": "^2.4.4",
     "parcel-bundler": "1.12.4",
+    "posthtml-link-noreferrer": "^1.0.5",
     "sass": "^1.23.0",
     "selenium-standalone": "^6.16.0"
   },
