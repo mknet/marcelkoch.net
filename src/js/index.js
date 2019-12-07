@@ -8,13 +8,6 @@ const CONSENT_COOKIE = 'mtm_consent'
 const dialog = document.querySelector('dialog');
 dialogPolyfill.registerDialog(dialog);
 
-
-const coachingLink = document.querySelector('a.coaching');
-coachingLink.addEventListener('click', function(e) {
-  e.preventDefault();
-  dialog.showModal();
-}, false);
-
 const header = document.querySelector('body > header > .object');
 
 DocReady( () => {
@@ -26,7 +19,6 @@ DocReady( () => {
     }
   }, 1000)
 } )
-
 
 const cookiesOkButton = document.querySelector('button[name=cookies-ok]');
 cookiesOkButton.addEventListener('click', (e) => {
@@ -57,8 +49,8 @@ const moreLinks = document.querySelectorAll('#methoden a');
 
 moreLinks.forEach(moreLink => {
   moreLink.addEventListener('click', function(e) {
-    e.preventDefault()
-    alert('Die Seite befindet sich im Aufbau. Deswegen kommt hiernach nichts.')
+    e.preventDefault();
+    dialog.showModal();
   })
 });
 
