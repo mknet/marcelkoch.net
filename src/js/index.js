@@ -51,3 +51,14 @@ const flixBox = document.querySelector('.flip-box .object');
 flixBox.addEventListener('transitionend', function(e) {
   body.classList.remove('no-cookie-decision');
 }, false);
+
+
+const moreLinks = document.querySelectorAll('#methoden a');
+
+moreLinks.forEach(moreLink => {
+  moreLink.addEventListener('click', function(e) {
+    e.preventDefault()
+    alert('Die Seite befindet sich im Aufbau. Deswegen kommt hiernach nichts.')
+  })
+});
+
