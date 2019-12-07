@@ -55,3 +55,14 @@ moreLinks.forEach(moreLink => {
   })
 });
 
+const moreSections = document.querySelectorAll('#methoden section');
+
+moreSections.forEach(moreSection => {
+  moreSection.addEventListener('click', function(e) {
+    e.preventDefault();
+    const linkElement = e.currentTarget.querySelector('a')
+    debugger;
+    linkElement.click()
+  })
+});
+
