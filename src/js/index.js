@@ -20,6 +20,7 @@ const header = document.querySelector('body > header > .object');
 DocReady( () => {
   setTimeout(() => {
     if (cookie.get(CONSENT_COOKIE)) {
+      body.classList.remove('no-cookie-decision');
     } else {
       header.classList.add("cookie-bar");
     }
