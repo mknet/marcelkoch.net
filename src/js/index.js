@@ -5,8 +5,11 @@ import DocReady from 'es6-docready'
 
 const CONSENT_COOKIE = 'mtm_consent'
 
+const bodyElement = document.querySelector('body')
+
 const dialog = document.querySelector('dialog');
 dialogPolyfill.registerDialog(dialog);
+
 
 const header = document.querySelector('body > header > .object');
 
@@ -51,17 +54,25 @@ moreLinks.forEach(moreLink => {
   moreLink.addEventListener('click', function(e) {
     _paq.push(['trackEvent', 'link', 'methods', e.target.pathname])
     e.preventDefault();
-    dialog.showModal();
-  })
-});
+    e.stopPropagation();
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+
+    bodyElement.addEventListener('click', (e) => {
+      const target = e.target;
+      dialog.close();
+    })
+  }, false)
+}, false);
 
 const moreSections = document.querySelectorAll('#methoden section');
 
 moreSections.forEach(moreSection => {
   moreSection.addEventListener('click', function(e) {
     e.preventDefault();
+    e.stopPropagation();
     const linkElement = e.currentTarget.querySelector('a')
-    debugger;
     linkElement.click()
   })
 });
