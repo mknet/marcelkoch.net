@@ -10,6 +10,12 @@ const bodyElement = document.querySelector('body')
 const dialog = document.querySelector('dialog');
 dialogPolyfill.registerDialog(dialog);
 
+dialog.addEventListener('click', (e) => {
+  if(!e.target.closest('div')) {
+    e.target.close();
+  }
+})
+
 
 const header = document.querySelector('body > header > .object');
 
@@ -58,13 +64,8 @@ moreLinks.forEach(moreLink => {
     if (!dialog.open) {
       dialog.showModal();
     }
-
-    bodyElement.addEventListener('click', (e) => {
-      const target = e.target;
-      dialog.close();
-    })
-  }, false)
-}, false);
+  })
+});
 
 const moreSections = document.querySelectorAll('#methoden section');
 

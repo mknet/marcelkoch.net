@@ -401,6 +401,26 @@ body:after {
   grid-area: footerright;
 }
 
+dialog {
+  padding: 0;
+
+  .dialog-content {
+    margin: 1rem;
+  }
+
+  h2 {
+    margin-top: 0;
+
+    span {
+      color: var(--green);
+    }
+  }
+
+  input[type=email] {
+    width: 30vw;
+  }
+}
+
 @import "stage";
 
 .kindle {
