@@ -29,7 +29,7 @@ const jsonToSend = {
 	"sender_address": sender,
 	"message": "Ich hätte gerne Informationen zu Kommunikation"
 }
-xhr.send(jsonToSend);
+xhr.send(JSON.stringify(jsonToSend));
 
 }
 export default sendInfoRequest
