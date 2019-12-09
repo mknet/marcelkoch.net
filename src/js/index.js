@@ -2,6 +2,7 @@ import dialogPolyfill from 'dialog-polyfill/dist/dialog-polyfill.esm'
 import cookie from 'js-cookie'
 
 import DocReady from 'es6-docready'
+import sendInfoRequest from './contact'
 
 const CONSENT_COOKIE = 'mtm_consent'
 
@@ -78,3 +79,8 @@ moreSections.forEach(moreSection => {
   })
 });
 
+const formElement = document.querySelector('form');
+formElement.addEventListener('submit', (e) => {
+  e.preventDefault();
+  sendInfoRequest(formElement.elements[0].value);
+})

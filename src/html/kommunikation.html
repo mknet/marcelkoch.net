@@ -161,8 +161,8 @@
         <p>Wenn ich Ihnen Bescheid geben soll, sobald es mehr Inhalt gibt,
           hinterlassen Sie gerne Ihre E-Mail-Adresse.</p>
 
-          <form action="/contact-request/communication">
-            <input type="email">
+          <form onsubmit="sendMessage(this); return false;" action="/contact-request/communication">
+            <input type="email" name="email">
             <button type="submit">Abschicken</button>
           </form>
     </div>
