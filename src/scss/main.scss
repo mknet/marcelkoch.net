@@ -4,6 +4,15 @@
 
 @import "flipbox";
 
+// COLORS
+
+// purple
+$darkest-purple: #320353;
+$almost-black-purple: #270042;
+
+// green
+$darkest-green: #013E4C;
+
 :root {
   --dark-purple: #410B66;
   --orange: #BF4A1F;
@@ -64,7 +73,7 @@ body {
   }
 
   font-family: Jaldi, sans-serif;
-  color: var(--dark-purple);
+  color: $almost-black-purple;
 
   background: var(--beige);
   margin: 0;
@@ -115,15 +124,15 @@ body::after {
 
 body q:first-of-type {
   grid-area: quote;
-  background: var(--light-purple);
+  background: $darkest-green;
 
   @include xl {
-    background: var(--dark-purple);
+    background: $almost-black-purple;
   }
 }
 
 body q:last-of-type {
-  background: var(--light-purple);
+  background: $darkest-green;
   grid-area: quote2;
   display: none;
   margin-bottom: 3rem;
