@@ -55,6 +55,8 @@ flixBox.addEventListener('transitionend', function(e) {
 }, false);
 
 
+const emailInput = document.querySelector('form input');
+
 const moreLinks = document.querySelectorAll('#methoden a');
 
 moreLinks.forEach(moreLink => {
@@ -64,6 +66,8 @@ moreLinks.forEach(moreLink => {
     e.stopPropagation();
     if (!dialog.open) {
       dialog.showModal();
+      debugger;
+      emailInput.blur();
     }
   })
 });
