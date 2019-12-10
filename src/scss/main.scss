@@ -115,16 +115,17 @@ body::after {
   grid-area: footerleft;
 }
 
-body q:first-of-type {
+body > p:first-of-type {
   grid-area: quote;
   background: $darkest-green;
 
   @include xl {
     background: $almost-black-purple;
+    margin: 0;
   }
 }
 
-body q:last-of-type {
+body > p:last-of-type {
   background: $darkest-green;
   grid-area: quote2;
   display: none;
@@ -135,7 +136,7 @@ body q:last-of-type {
   }
 }
 
-q {
+body > p {
   color: white;
   display: block;
   text-align: center;
