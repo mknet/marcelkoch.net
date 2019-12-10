@@ -4,14 +4,7 @@
 
 @import "flipbox";
 
-// COLORS
-
-// purple
-$darkest-purple: #320353;
-$almost-black-purple: #270042;
-
-// green
-$darkest-green: #013E4C;
+@import "variables";
 
 :root {
   --dark-purple: #410B66;
@@ -390,7 +383,7 @@ body > footer {
       p {
         padding: 0;
         margin: 0;
-        color: var(--green);
+        color: $darker-purple;
         font-weight: bold;
       }
     }

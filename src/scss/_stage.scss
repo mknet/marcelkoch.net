@@ -1,5 +1,7 @@
 @import "responsive";
 
+@import "variables";
+
 #stage {
   grid-area: stage;
 
@@ -197,7 +199,7 @@ h1 {
     position: absolute;
     top: -33px;
     left: 12px;
-    color: var(--green);
+    color: $purple;
 
     @include xl {
       position: initial;
