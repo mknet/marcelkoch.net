@@ -165,11 +165,14 @@ body > header {
     .flip-content {
       display: grid;
 
-      grid-template-columns: 40px auto 400px 40px;
+      grid-template-columns: 40px auto 400px;
 
       grid-template-areas:
-      ". logo claim  .";
+      ". logo claim";
       font-size: 26px;
+
+      height: 100px;
+      align-items: center;
 
       &.cookiebar {
 
@@ -186,7 +189,7 @@ body > header {
       flex-wrap: wrap;
 
       @include xl {
-        padding: 1rem;
+        padding: 0 1rem;
         flex-wrap: initial;
       }
 
@@ -326,11 +329,10 @@ body > footer {
   }
 }
 
-#mknet__logo {
+.mklogo {
   fill: white;
+  margin-top: -9px;
 }
-
-.fill-white { fill: white; }
 
 #methoden {
   grid-area: methods;
