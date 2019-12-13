@@ -5,7 +5,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/html/kommunikation.html",
-    "test": "jest",
+    "start:home": "parcel src/html/index.html",
+    "test": "npm run build",
     "build": "parcel build --no-cache src/html/kommunikation.html",
     "setup": "npm i & selenium-standalone install",
     "deploy": "ts-node scripts/ts/deploy/index.ts"
