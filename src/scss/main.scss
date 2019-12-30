@@ -61,6 +61,8 @@ html {
 
 body {
 
+  max-width: 1600px;
+
   &.no-cookie-decision {
     overflow: hidden;
   }
