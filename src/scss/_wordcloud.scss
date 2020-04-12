@@ -26,14 +26,8 @@
   font-size: 11.30483246px;
 }
 
-a:link {
-  text {
-    fill: var(--orange);
-  }
-}
-
 a:hover {
   text {
-    transform: perspective(400px);
+    fill: var(--orange);
   }
 }
