@@ -21,16 +21,16 @@
     "url": "https://github.com/mknet/marcelkoch.net.git"
   },
   "devDependencies": {
-    "basic-ftp": "^4.5.1",
+    "basic-ftp": "^4.5.4",
     "cssnano": "^4.1.10",
     "galenframework-cli": "^2.4.4",
     "parcel-bundler": "1.12.4",
-    "posthtml-link-noreferrer": "^1.0.5",
-    "sass": "^1.23.7",
+    "posthtml-link-noreferrer": "^1.0.6",
+    "sass": "^1.26.3",
     "selenium-standalone": "^6.17.0"
   },
   "dependencies": {
-    "dialog-polyfill": "^0.5.0",
+    "dialog-polyfill": "^0.5.1",
     "es6-docready": "^1.0.1",
     "js-cookie": "^2.2.1"
   }
