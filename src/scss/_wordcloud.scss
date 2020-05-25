@@ -26,8 +26,13 @@
   font-size: 11.30483246px;
 }
 
-a:hover {
-  text {
-    fill: var(--orange);
+.Competences__bigpicture {
+  a:hover {
+    text {
+      fill: var(--orange);
+      font-weight: bold;
+    }
+    text-decoration: none;
   }
 }
+
