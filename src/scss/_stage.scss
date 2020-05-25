@@ -89,7 +89,7 @@
     color: var(--dark-purple);
 
     @include xl {
-      font-size: 22px;
+      font-size: 21px;
     }
   }
 
@@ -99,7 +99,8 @@
     list-style: none;
     padding: 0;
     color: var(--green);
-    font-size: 27px;
+    font-size: 24px;
+    line-height: 1.2;
 
     margin-block-start: 6rem;
 
