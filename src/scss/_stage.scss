@@ -17,10 +17,6 @@
     grid-template-rows: 1fr 2fr 2fr 10px;
     grid-gap: 26px;
 
-    header {
-      margin: 15% 0 8% 25%;
-    }
-
     ul {
       display: flex;
       list-style: none;
@@ -39,7 +35,7 @@
     @include xl {
       grid-column: 1 / span 2;
       grid-row: 1 / span 3;
-      padding: initial;
+      padding: 3rem 6rem;
     }
 
     a {
@@ -90,11 +86,35 @@
   p {
     font-size: 18px;
     margin: 0;
-    color: var(--green);
-    width: 250px;
+    color: var(--dark-purple);
 
     @include xl {
-      font-size: 24px;
+      font-size: 22px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    color: var(--green);
+    font-size: 27px;
+
+    margin-block-start: 6rem;
+
+    @include xl {
+      justify-content: center;
+      padding: 0;
+    }
+
+  }
+
+  li {
+    margin-bottom: 20px;
+
+    @include xl {
+      margin: 0 1rem .25em 0;
     }
   }
 
@@ -109,27 +129,31 @@
       }
 
     }
-  }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-
-    @include xl {
-      justify-content: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
       padding: 0;
-      flex-direction: row;
+      color: var(--green);
+      font-size: 21px;
+  
+      margin-block-start: 6rem;
+  
+      @include xl {
+        justify-content: start;
+        padding: 0;
+        flex-direction: row;
+      }
+  
     }
-
-  }
-
-  li {
-    margin-bottom: 20px;
-
-    @include xl {
-      margin: 0 1rem 0 0;
+  
+    li {
+      margin-bottom: 20px;
+  
+      @include xl {
+        margin: 0 1rem 0 0;
+      }
     }
   }
 
@@ -139,8 +163,8 @@
     height: 151px;
 
     @include xl {
-      width: 281px;
-      height: 248px;
+      width: 318px;
+      height: 281px;
     }
   }
 }
@@ -151,7 +175,7 @@ h1 {
   margin:0;
 
   @include xl {
-    font-size: 76px;
+    font-size: 78px;
   }
 }
 
