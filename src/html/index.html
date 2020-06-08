@@ -1,68 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="../../node_modules/dialog-polyfill/dist/dialog-polyfill.css" />
-  <link rel="stylesheet" href="../scss/main.scss">
-  <link rel="canonical" href="https://www.marcelkoch.net/kommunikation.html">
-  <title>
-    Kommunikation - Coaching &amp; Seminare | Marcel Koch
-  </title>
-  <!-- Matomo -->
-  <script type="text/javascript">
-    var _paq = window._paq || [];
-    // require user consent before processing data
-    _paq.push(['requireConsent']);
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//da.marcelkoch.net/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
-</head>
-<body>
-  <header class="flip-box flip-up">
-      <div class="object">
-          <div class="front">
-              <div class="flip-content">
-                  <svg class="mklogo" width="252px" height="76px" viewBox="0 0 347 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <use xlink:href="../img/svg/logo.svg#mknet__logo"></use>
-                  </svg>
-              <p id="mknet__claim">Consulting <b>//</b> Coding <b>//</b> <a href="/kommunikation.html">Communication</a></p>
-                  <label>
-                    <input type="checkbox">Menü
-                  </label>
-              </div>
-          </div>
-          <div class="back">
-              <div class="flip-content cookiebar">
-                <img class="cookie-icon" src="../img/svg/cookie.svg" />
-                <header>
-                    <h2>Schulterblick erlaubt?</h2>
-                    <p>Ich würde gerne Cookies verwenden.</p>
-                </header>
-                <button name="cookies-ok">OK</button>
-                <button name="cookies-no">Nein</button>
-              </div>
-          </div>
-          <div class="flank">
-              <div class="flank-content">
-                Kurze Frage
-              </div>
-          </div>
-      </div>
-  </header>
-  <include src="button.html" locals='{
-    "text": "Button"
-}'></include>
+<include src="header.html"></include>
     <article id="stage">
       <section>
       <header>
@@ -314,6 +250,4 @@
           </form>
     </div>
   </dialog>
-  <script src="../js/index.js"></script>
-</body>
-</html>
+<include src="footer.html"></include>
