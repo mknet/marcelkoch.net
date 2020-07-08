@@ -8,6 +8,7 @@
 
 :root {
   --dark-purple: #410B66;
+  --dark-purple-50: rgba(65, 11, 102, 0.5);
   --orange: #BF4A1F;
   --beige: #fffaf5;
   --light-green: rgb(101, 143, 157);
@@ -15,6 +16,8 @@
   --font: 'Asap', Helvetica, Verdana, sans-serif;
   --text-color: black;
   --light-purple: #8D4CB9;
+
+  font-size: 16px;
 }
 
 @keyframes shake {
@@ -44,6 +47,10 @@
 
 hr {
   display: none;
+}
+
+b {
+  font-weight: bold;
 }
 
 a:link, a:visited {
