@@ -43,6 +43,30 @@
     <p>20 Jahre Erfahrung // kommunikationsstark // breites Wissen // flexibel</p>
     <hr>
     <article id="methoden">
+      <h1>Schriftlich</h1>
+      <h2>Schriftlich</h2>
+      <contact-form>
+        <form method="POST" action="/contact-request">
+          <mk-input>
+            <input type="text" name="fullname" id="contact-name" placeholder="z.B. Hans Müller"/>
+            <label for="contact-name">Name</label>
+          </mk-input>
+          <mk-input>
+            <input type="text" name="phone" id="contact-phone" placeholder="z.B. 069 / 123"/>
+            <label for="contact-phone">Telefon</label>
+          </mk-input>
+          <mk-input>
+            <input type="text" name="subject" id="contact-subject" list="contact-subjects" placeholder="z.B. Projektanfrage"/>
+            <label for="contact-subject">Betreff</label>
+            <datalist id="contact-subjects">
+              <option value="Projektanfrage">
+              <option value="Bitte um Rückruf"> 
+            </datalist>
+          </mk-input>
+          <textarea placeholder="Hallo Herr Koch ..."></textarea>
+          <input type="submit" value="Gude">
+        </form>
+      </contact-form>
         <svg class="Competences__bigpicture" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
         id="svg1545" viewBox="0 0 1016.9413 299.48505" width="100%" version="1.1">
