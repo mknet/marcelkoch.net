@@ -4,6 +4,12 @@ import cookie from 'js-cookie'
 import DocReady from 'es6-docready'
 import sendInfoRequest from './contact'
 
+import { Elm } from '../Main.elm'
+
+Elm.Main.init({
+  node: document.querySelector('main')
+})
+
 const CONSENT_COOKIE = 'mtm_consent'
 
 const bodyElement = document.querySelector('body')
