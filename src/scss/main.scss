@@ -1,7 +1,8 @@
 @use 'fonts';
 
-@import "responsive";
+@import "../..//node_modules/reset-css/reset.css";
 
+@import "responsive";
 @import "flipbox";
 
 @import "variables";
