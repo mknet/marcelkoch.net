@@ -4,10 +4,7 @@
 
 @import "responsive";
 @import "flipbox";
-
 @import "variables";
-
-@import "wordcloud";
 
 :root {
   --dark-purple: #410B66;
@@ -592,3 +589,5 @@ dialog {
   }
 }
 
+@import "wordcloud";
+@import "contact-form";
