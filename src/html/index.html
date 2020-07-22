@@ -47,6 +47,8 @@
       <h2>Schriftlich</h2>
       <contact-form>
         <form method="POST" action="/contact-request">
+          <fieldset>
+            <legend>Ihre Kontaktdaten</legend>
           <mk-input>
             <input type="text" name="fullname" id="contact-name" placeholder="z.B. Hans Müller"/>
             <label for="contact-name">Name</label>
@@ -63,8 +65,11 @@
               <option value="Bitte um Rückruf"> 
             </datalist>
           </mk-input>
-          <textarea placeholder="Hallo Herr Koch ..."></textarea>
-          <input type="submit" value="Gude">
+          </fieldset>
+          <mk-textarea>
+            <textarea placeholder="Hallo Herr Koch ..."></textarea>
+          </mk-textarea>
+          <mk-input><input type="submit" value="Gude"></mk-input>
         </form>
       </contact-form>
         <svg class="Competences__bigpicture" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
