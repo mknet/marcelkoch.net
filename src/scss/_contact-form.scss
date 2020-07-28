@@ -17,7 +17,7 @@ contact-form {
             color: var(--dark-purple-50);
             font-size: .6em;
             text-align: right;
-            line-height: 20px;
+            line-height: 2.5rem;
         }
 
         &::-ms-input-placeholder {
@@ -38,6 +38,13 @@ contact-form {
           }
         }
     }
+
+    input[type=text] {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 4em;
+        padding-left: .5em;
+        padding-right: 1rem;
 
     mk-textarea {
       display: block;
@@ -67,7 +74,8 @@ contact-form {
 contact-form form {
     display: flex;
     flex-flow: column wrap;
-    max-height: 550px;
+    max-height: 461px;
+    align-items: flex-start;
 }
 
 mk-input {
