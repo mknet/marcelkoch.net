@@ -48,9 +48,60 @@ contact-form {
     }
     
     mk-textarea {
-      display: block;
+      display: flex;
       flex-grow: 4;
       margin: 2em;
+      flex-flow: column;
+
+      position: relative;
+
+      label {
+        position: absolute;
+        top: .8em;
+        left: .5rem;
+        line-height: 1em;
+        font-weight: bold;
+        color: var(--dark-purple);
+        z-index: 1;
+        font-size: 1.5rem;
+      }
+
+      textarea {
+        margin-top: 2.5em;
+      }
+
+      textarea::placeholder {
+        transform: translateY(3em);
+      }
+
+      textarea:focus::placeholder {
+        transform: translateY(0);
+        color: var(--dark-purple-50);
+
+        transition: transform 0.2s;
+      }
+    
+      textarea:placeholder-shown + label {
+        position: absolute;
+        top: 2em;
+        left: .5rem;
+        line-height: 2.2em;
+        font-weight: normal;
+    
+        transition: background-color 0.2s, color 0.2s,
+          top 0.2s,
+          bottom 0.2s,
+          right 0.2s,
+          left 0.2s;
+      }
+    
+      textarea:focus + label, textarea:not(:placeholder-shown) + label {
+        top: 0;
+        left: .5rem;
+        line-height: 1em;
+        font-weight: bold;
+        color: var(--dark-purple);
+      }
     }
 
     textarea {
@@ -67,7 +118,6 @@ contact-form {
     }
 
     input {
-      box-shadow: inset 0 2px 4px 0 rgba(206, 209, 224, 1);
       padding: .2em .5em;
     }
 }
@@ -104,7 +154,7 @@ mk-input {
   
     input:placeholder-shown + label {
       position: absolute;
-      top: 2.3em;
+      top: 2em;
       left: .5rem;
       line-height: 2.2em;
       font-weight: normal;
