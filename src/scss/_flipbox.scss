@@ -81,6 +81,8 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     z-index: 1;
     background-color: $bg-color-front;
     transform: rotateY(0deg) translateZ(($perspective / 2));
+    padding: 0 40px;
+    box-sizing: border-box;
   }
 
   .back {

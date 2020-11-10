@@ -105,7 +105,7 @@ body {
     grid-template-columns: 40px 50px auto 50px 40px;
 
     grid-template-areas:
-    ". header header header headerright"
+    "header header header header header"
     ". stage stage stage ."
     "quote quote quote quote quote"
     ". methods methods methods ."
