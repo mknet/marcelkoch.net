@@ -2,6 +2,7 @@
   "name": "marcelkoch.net-2019",
   "version": "1.0.0",
   "description": "marcelkoch.net, Version of 2019",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/html/kommunikation.html",
     "build": "parcel build src/html/kommunikation.html",
@@ -20,10 +21,11 @@
     "url": "https://github.com/mknet/marcelkoch.net.git"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
     "basic-ftp": "^4.5.1",
     "cssnano": "^4.1.10",
     "galenframework-cli": "^2.4.4",
-    "parcel-bundler": "1.12.4",
+    "parcel": "^2.0.0",
     "posthtml-link-noreferrer": "^1.0.5",
     "sass": "^1.23.7",
     "selenium-standalone": "^6.17.0"
