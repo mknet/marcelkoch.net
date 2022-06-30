@@ -100,6 +100,7 @@ body {
     "header header header header header"
     ". stage stage stage ."
     "quote quote quote quote quote"
+    ". services services services ."
     ". methods methods methods ."
     "quote2 quote2 quote2 quote2 quote2"
     "footer footer footer footer footer";
@@ -323,6 +324,98 @@ body > footer {
 .mklogo {
   fill: white;
   margin-top: -9px;
+}
+
+#leistungen {
+  grid-area: services;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-weight: normal;
+    font-size: 40px;
+    margin: 2em 0 1em 0;
+    text-align: center;
+  }
+
+  section {
+    background-color: var(--dark-purple);
+    border-radius: 6px;
+
+    &:hover {
+      background-color: var(--orange);
+
+      ul a:link {
+        color: var(--beige);
+      }
+
+      ul a:visited {
+        color: #e2d6ca;
+      }
+
+      ul a:hover {
+        color: white;
+      }
+    }
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 19px;
+    width: 380px;
+
+    ul {
+      list-style: none;
+      color: #D1BED6;
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+      font-size: 21px;
+    }
+
+    a:not(.main-link) {
+      position: relative;
+      z-index: 1;
+    }
+
+    .main-link {
+      display: block;
+    }
+
+    .main-link::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    a:link {
+      color: #D1BED6;
+    }
+
+    a:visited {
+      color: #af86bb;
+      opacity: .8;
+    }
+
+    a:hover {
+      color: white;
+
+      h3 {
+        color: white;
+      }
+    }
+
+    h3, > a {
+      color: var(--beige);
+      font-size: 60px;
+      font-weight: normal;
+      align-self: end;
+      margin: 0;
+    }
+  }
 }
 
 #methoden {
