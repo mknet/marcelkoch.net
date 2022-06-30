@@ -337,6 +337,11 @@ body > footer {
     text-align: center;
   }
 
+  > div {
+    display: flex;
+    gap: 12px;
+  } 
+
   section {
     background-color: var(--dark-purple);
     border-radius: 6px;
@@ -362,7 +367,10 @@ body > footer {
     display: flex;
     flex-direction: column-reverse;
     padding: 19px;
-    width: 380px;
+    width: 25%;
+
+    justify-content: space-between;
+    align-items: flex-start;
 
     ul {
       list-style: none;
