@@ -2,3 +2,4 @@
 dist
 node_modules
 elm-stuff/0.19.1
+elm-stuff/.elm-analyse

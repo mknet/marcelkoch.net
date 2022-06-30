@@ -13,26 +13,23 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "12.13.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mknet/marcelkoch.net.git"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.2",
-    "basic-ftp": "^4.5.1",
-    "cssnano": "^4.1.10",
+    "basic-ftp": "^4.6.6",
+    "cssnano": "^5.1.12",
     "galenframework-cli": "^2.4.4",
-    "parcel": "^2.0.0",
-    "posthtml-link-noreferrer": "^1.0.5",
-    "sass": "^1.23.7",
-    "selenium-standalone": "^6.17.0"
+    "parcel": "^2.6.2",
+    "posthtml-link-noreferrer": "^1.0.10",
+    "sass": "^1.53.0",
+    "selenium-standalone": "^8.1.4"
   },
   "dependencies": {
-    "dialog-polyfill": "^0.5.0",
+    "dialog-polyfill": "^0.5.6",
     "es6-docready": "^1.0.1",
-    "js-cookie": "^2.2.1"
+    "js-cookie": "^3.0.1"
   }
 }
