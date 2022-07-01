@@ -7,8 +7,7 @@
     "start": "parcel src/html/kommunikation.html",
     "build": "parcel build src/html/kommunikation.html",
     "setup": "npm i & selenium-standalone install",
-    "deploy": "node src/js/deploy.js",
-    "uitest": "galen check test/galen/kommunikation.gspec --url https://stage.marcelkoch.net/kommunikation.html --size 1200x800"
+    "deploy": "node src/js/deploy.js"
   },
   "keywords": [],
   "author": "",
@@ -21,11 +20,9 @@
     "@parcel/transformer-sass": "^2.6.2",
     "basic-ftp": "^4.6.6",
     "cssnano": "^5.1.12",
-    "galenframework-cli": "^2.4.4",
     "parcel": "^2.6.2",
     "posthtml-link-noreferrer": "^1.0.10",
-    "sass": "^1.53.0",
-    "selenium-standalone": "^8.1.4"
+    "sass": "^1.53.0"
   },
   "dependencies": {
     "dialog-polyfill": "^0.5.6",
