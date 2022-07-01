@@ -21,6 +21,7 @@
     "basic-ftp": "^4.6.6",
     "cssnano": "^5.1.12",
     "parcel": "^2.6.2",
+    "postcss": "^8.4.14",
     "posthtml-link-noreferrer": "^1.0.10",
     "sass": "^1.53.0"
   },
