@@ -62,10 +62,6 @@ html {
 body {
   margin: 0 auto;
 
-  &.no-cookie-decision {
-    overflow: hidden;
-  }
-
   font-family: Asap, sans-serif;
   color: $almost-black-purple;
 
@@ -95,7 +91,7 @@ body {
     grid-template-columns: 40px 50px 70fr 50px 40px auto;
 
     grid-template-areas:
-    "header header header header header nav"
+    "header header header offcanvas-button offcanvas-button nav"
     ". stage stage stage . nav"
     "quote quote quote quote quote nav"
     ". services services services . nav"
@@ -296,10 +292,7 @@ body > header {
   grid-area: nav;
   background-color: #FFFDFC;
 
-  -o-transition: all 5s;
-  -moz-transition: all 5s;
-  -webkit-transition: all 5s;
-  transition: all 5s;
+  transition: width .7s;
 
   box-shadow: inset 6px 0 23px #ebe4d9;
   &:hover {
@@ -311,10 +304,39 @@ body > header {
 
 }
 
-.nav-active #nav {
+#offcanvas {
+
+  background-color: var(--dark-purple);
+
+  grid-area: offcanvas-button;
+
+  display: flex;
+  align-items: center;
+
+}
+
+
+#offcanvas:valid + #nav {
 
   width: 300px;
 
+}
+
+#offcanvas-label {
+  color: white;
+  border: 5px solid white;
+  border-color: white;
+  padding: 1em;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--orange);
+    cursor: pointer;
+  }
+}
+
+#offcanvas-active {
+  display: none;
 }
 
 body > footer {
