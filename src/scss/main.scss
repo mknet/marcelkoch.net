@@ -60,8 +60,6 @@ html {
 }
 
 body {
-
-  max-width: 1600px;
   margin: 0 auto;
 
   &.no-cookie-decision {
@@ -94,16 +92,16 @@ body {
   }
 
   @media screen and (min-width: 1200px) {
-    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-columns: 40px 50px 70fr 50px 40px auto;
 
     grid-template-areas:
-    "header header header header header"
-    ". stage stage stage ."
-    "quote quote quote quote quote"
-    ". services services services ."
-    ". methods methods methods ."
-    "quote2 quote2 quote2 quote2 quote2"
-    "footer footer footer footer footer";
+    "header header header header header nav"
+    ". stage stage stage . nav"
+    "quote quote quote quote quote nav"
+    ". services services services . nav"
+    ". methods methods methods . nav"
+    "quote2 quote2 quote2 quote2 quote2 nav"
+    "footer footer footer footer footer nav";
   }
 }
 
@@ -291,6 +289,32 @@ body > header {
   p {
     grid-area: claim;
   }
+}
+
+#nav {
+
+  grid-area: nav;
+  background-color: #FFFDFC;
+
+  -o-transition: all 5s;
+  -moz-transition: all 5s;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+
+  box-shadow: inset 6px 0 23px #ebe4d9;
+  &:hover {
+    background: white;
+  }
+
+  width: 0;
+  overflow: hidden;
+
+}
+
+.nav-active #nav {
+
+  width: 300px;
+
 }
 
 body > footer {
