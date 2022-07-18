@@ -1,0 +1,25 @@
+Softwarearchitekur
+Softwareentwicklung
+Kommunikation
+Kotlin
+Java
+Typescript
+Magnolia CMS
+Spring Boot
+node.js
+Rust
+Agile
+Scrum
+
+AWS
+Cloudformation
+ECS
+EC2
+Docker
+webpack
+MySQL
+IntelliJ
+expressjs
+Mongoose
+nginx
+Elastic Search
