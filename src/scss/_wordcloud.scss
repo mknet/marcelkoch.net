@@ -1,10 +1,12 @@
 @import "variables";
+@import "fonts";
 .Competences__bigpicture text {
   fill: var(--dark-purple);
   opacity: 1;
   stroke: none;
   line-height: normal;
-  font-family: Jaldi;
+  font-family: Asap;
+  font-weight: bold;
   text-anchor: start;
   opacity: 1;
   stroke: none;
