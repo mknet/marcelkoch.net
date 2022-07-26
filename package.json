@@ -8,7 +8,7 @@
     "test": "npm run build",
     "build": "parcel build --no-cache src/html/kommunikation.html",
     "setup": "npm i & selenium-standalone install",
-    "deploy": "node src/js/deploy.js"
+    "deploy": "ts-node scripts/ts/deploy.ts"
   },
   "keywords": [],
   "author": "",

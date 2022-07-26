@@ -1,4 +1,4 @@
-const ftp = require("basic-ftp")
+import {Client} from "basic-ftp"
 
 const ftpPass = process.env.FTP_PASSWORD
 if (!ftpPass) {
@@ -8,8 +8,8 @@ if (!ftpPass) {
 
 deploy()
 
-async function deploy() {
-    const client = new ftp.Client()
+export async function deploy() {
+    const client = new Client()
     client.ftp.verbose = true
     try {
         await client.access({
