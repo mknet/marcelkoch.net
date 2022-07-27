@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "es5"
+      },
+    "typeAcquisition": { "include": ["jest"] },
+    "files": ["node_modules/jest-extended/types/index.d.ts"],
+}
