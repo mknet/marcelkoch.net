@@ -4,12 +4,6 @@ import cookie from 'js-cookie'
 import DocReady from 'es6-docready'
 import sendInfoRequest from './contact'
 
-import { Elm } from '../Main.elm'
-
-Elm.Main.init({
-  node: document.querySelector('main')
-})
-
 const CONSENT_COOKIE = 'mtm_consent'
 
 const bodyElement = document.querySelector('body')
@@ -22,7 +16,6 @@ dialog.addEventListener('click', (e) => {
     e.target.close();
   }
 })
-
 
 const header = document.querySelector('body > header > .object');
 
