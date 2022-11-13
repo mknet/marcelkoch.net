@@ -19,6 +19,8 @@ $bg-color-front-alternative: #931e83;
 $bg-color-back-alternative: lighten($bg-color-front-alternative, 10%);
 $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
+$dividedPerspective: calc($perspective / 2);
+
 
 // 2 extend
 
@@ -35,14 +37,15 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
 
 
 @keyframes slideInFromLeft {
+
   0% {
-    transform: translateZ(-($perspective / 2)) rotateX(0deg);
+    transform: translateZ(-$dividedPerspective) rotateX(0deg);
   }
   50% {
-    transform: translateZ(-($perspective / 2)) rotateX(180deg);
+    transform: translateZ(-$dividedPerspective) rotateX(180deg);
   }
   100% {
-    transform: translateZ(-($perspective / 2)) rotateX(0deg);
+    transform: translateZ(-$dividedPerspective) rotateX(0deg);
   }
 }
 
@@ -63,13 +66,13 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     transform-style: preserve-3d;
-    transform: translateZ(-($perspective / 2));
+    transform: translateZ(-$dividedPerspective);
 
     &.cookie-bar {
       transition-property: transform;
       transition-duration: 2.5s;
       transition-timing-function: ease-in-out;
-      transform: translateZ(-($perspective / 2)) rotateY(180deg);
+      transform: translateZ(-$dividedPerspective) rotateY(180deg);
     }
 
 
@@ -80,7 +83,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     @extend .slice;
     z-index: 1;
     background-color: $bg-color-front;
-    transform: rotateY(0deg) translateZ(($perspective / 2));
+    transform: rotateY(0deg) translateZ($dividedPerspective);
   }
 
   .back {
@@ -88,7 +91,7 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
     @extend .slice;
     z-index: 0;
     background-color: $bg-color-back;
-    transform: rotateY(180deg) translateZ(($perspective / 2));
+    transform: rotateY(180deg) translateZ($dividedPerspective);
   }
 
   .flank {
@@ -115,21 +118,21 @@ $bg-color-flank-alternative: darken($bg-color-front-alternative, 10%);
       // animation-iteration-count: infinite;
 
       &.cookie-bar {
-        transform: translateZ(-($perspective / 2)) rotateX(180deg);
+        transform: translateZ(-$dividedPerspective) rotateX(180deg);
       }
 
     }
 
     .back {
-      transform: rotateX(180deg) translateZ(($perspective / 2));
+      transform: rotateX(180deg) translateZ($dividedPerspective);
     }
 
     .flank {
       width: 100%;
       height: $perspective;
       left: 0;
-      top: (($box-height - $perspective) / 2 );
-      transform: rotateX(-90deg) translateZ(($box-height / 2));
+      top: calc(($box-height - $perspective) / 2 );
+      transform: rotateX(-90deg) translateZ(calc($box-height / 2));
     }
 
   }
