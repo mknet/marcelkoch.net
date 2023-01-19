@@ -5,3 +5,4 @@ elm-stuff/0.19.1
 elm-stuff/.elm-analyse
 .idea
 tools/deploy/target
+.DS_Store
