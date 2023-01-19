@@ -295,10 +295,13 @@ body > header {
   }
 }
 
-#nav {
+#offcanvas-nav {
 
   grid-area: nav;
   background-color: #FFFDFC;
+
+  font-size: 22px;
+  font-weight: 300;
 
   transition: width .7s;
 
@@ -310,6 +313,16 @@ body > header {
   width: 0;
   overflow: hidden;
 
+  li {
+    margin-top: .5em;;
+  }
+
+  a.current {
+    &:link, &:visited {
+      color: var(--dark-purple);
+      font-weight: 500;
+    }
+  }
 }
 
 #offcanvas {
@@ -324,11 +337,25 @@ body > header {
 }
 
 
-#offcanvas:valid + #nav {
-
-  width: 300px;
+#offcanvas:valid + #offcanvas-nav {
+  width: 28vh;
 
 }
+
+#offcanvas-nav div {
+  margin: 3em;
+  width: 18vh;
+
+  font-family: 'Asap Condensed';
+
+  position: fixed;
+
+  opacity: .5;
+
+  &:hover {
+    opacity: 1;
+  }
+ }
 
 #offcanvas-label {
   color: white;
