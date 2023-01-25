@@ -317,10 +317,20 @@ body > header {
     margin-top: .5em;;
   }
 
-  a.current {
+  a {
     &:link, &:visited {
       color: var(--dark-purple);
-      font-weight: 500;
+    }
+
+    &:hover {
+      color: var(--orange);
+    }
+  }
+
+  a.current {
+    &:link, &:visited {
+
+      font-weight: 600;
     }
   }
 }
@@ -349,12 +359,6 @@ body > header {
   font-family: 'Asap Condensed';
 
   position: fixed;
-
-  opacity: .5;
-
-  &:hover {
-    opacity: 1;
-  }
  }
 
 #offcanvas-label {
