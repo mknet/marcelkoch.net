@@ -99,13 +99,13 @@ body {
     grid-template-columns: 40px 50px 70fr 50px 40px auto;
 
     grid-template-areas:
-    "header header header header header header"
-    ". stage stage stage . nav"
-    "quote quote quote quote quote nav"
-    ". services services services . nav"
-    ". methods methods methods . nav"
-    "quote2 quote2 quote2 quote2 quote2 nav"
-    "footer footer footer footer footer nav";
+    "header header header header header"
+    ". stage stage stage ."
+    "quote quote quote quote quote"
+    ". leistungen leistungen leistungen ."
+    ". kontakt kontakt kontakt ."
+    "quote2 quote2 quote2 quote2 quote2 "
+    "footer footer footer footer footer";
   }
 }
 
@@ -330,7 +330,7 @@ body > footer {
 }
 
 #leistungen {
-  grid-area: services;
+  grid-area: leistungen;
   margin-bottom: 2rem;
 
   h2 {
@@ -382,6 +382,15 @@ body > footer {
       margin: 0;
       font-weight: 700;
       font-size: 21px;
+
+      li {
+        margin-bottom: .3em;
+      }
+
+      a {
+        font-weight: 400;
+        margin-bottom: .7em;
+      }
     }
 
     a:not(.main-link) {
@@ -430,7 +439,7 @@ body > footer {
 }
 
 #kontakt {
-  grid-area: methods;
+  grid-area: kontakt;
   margin-bottom: 2rem;
 
   &:target {
