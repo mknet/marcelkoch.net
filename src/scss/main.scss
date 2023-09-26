@@ -99,7 +99,7 @@ body {
     grid-template-columns: 40px 50px 70fr 50px 40px auto;
 
     grid-template-areas:
-    "header header header offcanvas-button offcanvas-button nav"
+    "header header header header header header"
     ". stage stage stage . nav"
     "quote quote quote quote quote nav"
     ". services services services . nav"
@@ -292,90 +292,8 @@ body > header {
 
   p {
     grid-area: claim;
+    text-align: right;
   }
-}
-
-#offcanvas-nav {
-
-  grid-area: nav;
-  background-color: #FFFDFC;
-
-  font-size: 22px;
-  font-weight: 300;
-
-  transition: width .7s;
-
-  box-shadow: inset 6px 0 23px #ebe4d9;
-  &:hover {
-    background: white;
-  }
-
-  width: 0;
-  overflow: hidden;
-
-  li {
-    margin-top: .5em;;
-  }
-
-  a {
-    &:link, &:visited {
-      color: var(--dark-purple);
-    }
-
-    &:hover {
-      color: var(--orange);
-    }
-  }
-
-  a.current {
-    &:link, &:visited {
-
-      font-weight: 600;
-    }
-  }
-}
-
-#offcanvas {
-
-  background-color: var(--dark-purple);
-
-  grid-area: offcanvas-button;
-
-  display: flex;
-  align-items: center;
-
-}
-
-
-#offcanvas:valid + #offcanvas-nav {
-  width: 28vh;
-
-}
-
-#offcanvas-nav div {
-  margin: 3em;
-  width: 18vh;
-
-  font-family: 'Asap Condensed';
-
-  position: fixed;
- }
-
-#offcanvas-label {
-  color: white;
-  border: 5px solid white;
-  border-color: white;
-  padding: 1em;
-  border-radius: 4px;
-
-  &:hover {
-    background-color: var(--orange);
-    cursor: pointer;
-  }
-}
-
-#offcanvas-active {
-  display: none;
 }
 
 body > footer {
