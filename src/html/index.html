@@ -29,15 +29,15 @@
           <fieldset>
             <legend>Ihre Kontaktdaten</legend>
           <mk-input>
-            <input type="text" name="fullname" id="contact-name" placeholder="z.B. Hans Müller"/>
+            <input required type="text" name="fullname" id="contact-name" placeholder="z.B. Hans Müller"/>
             <label for="contact-name">Name</label>
           </mk-input>
           <mk-input>
-            <input type="text" name="phone" id="contact-phone" placeholder="z.B. 069 / 123"/>
+            <input required type="text" name="phone" id="contact-phone" placeholder="z.B. 069 / 123"/>
             <label for="contact-phone">Telefon</label>
           </mk-input>
           <mk-input>
-            <input type="text" name="subject" id="contact-subject" list="contact-subjects" placeholder="z.B. Projektanfrage"/>
+            <input requred type="text" name="subject" id="contact-subject" list="contact-subjects" placeholder="z.B. Projektanfrage"/>
             <label for="contact-subject">Betreff</label>
             <datalist id="contact-subjects">
               <option value="Projektanfrage">
@@ -46,10 +46,10 @@
           </mk-input>
           </fieldset>
           <mk-textarea>
-            <textarea id="contact-subject" placeholder="Hallo Herr Koch, ..."></textarea>
+            <textarea required id="contact-subject" placeholder="Hallo Herr Koch, ..."></textarea>
             <label for="contact-subject">Ihre Nachricht</label>
           </mk-textarea>
-          <mk-input class="submit"><input type="submit" value="Gude"></mk-input>
+          <mk-input class="submit"><input type="submit" value="Abschicken"></mk-input>
         </form>
       </contact-form>
         <svg class="Competences__bigpicture" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
