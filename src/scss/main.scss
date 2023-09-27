@@ -109,6 +109,7 @@ body {
     ". leistungen leistungen leistungen ."
     "quote3 quote3 quote3 quote3 quote3"
     ". . methoden . ."
+    "meinung meinung meinung meinung meinung"
     "quote2 quote2 quote2 quote2 quote2 "
     ". kontakt kontakt kontakt ."
     "footer footer footer footer footer";
@@ -524,6 +525,38 @@ body > footer {
       text-align: right;
       padding: 1em;
       align-self: flex-end;
+    }
+  }
+}
+
+#meinung {
+  grid-area: meinung;
+  background-color: #4C90A0;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+
+  h2 {
+    text-align: center;
+    margin: 0 0 1.8em;
+    font-size: 40px;
+    font-weight: normal;
+  }
+
+  blockquote {
+    font-style: italic;
+    max-width: 50vw;
+    line-height: 1.6em;
+
+    footer {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-top: 1rem;
     }
   }
 }
