@@ -103,6 +103,7 @@ body {
     ". stage stage stage ."
     "quote quote quote quote quote"
     ". leistungen leistungen leistungen ."
+    "quote3 quote3 quote3 quote3 quote3"
     ". kontakt kontakt kontakt ."
     "quote2 quote2 quote2 quote2 quote2 "
     "footer footer footer footer footer";
@@ -111,6 +112,16 @@ body {
 
 body > p:first-of-type {
   grid-area: quote;
+  background: $darkest-green;
+
+  @include xl {
+    background: $almost-black-purple;
+    margin: 0;
+  }
+}
+
+body > p:nth-of-type(2) {
+  grid-area: quote3;
   background: $darkest-green;
 
   @include xl {
