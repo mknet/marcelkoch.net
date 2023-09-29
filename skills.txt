@@ -1,25 +1,92 @@
 Softwarearchitekur
 Softwareentwicklung
 Kommunikation
-Kotlin
+
 Java
+Kotlin
 Typescript
-Magnolia CMS
-Spring Boot
+Spring
 node.js
+Magnolia CMS
 Rust
 Agile
+Tomcat
+Gewaltfrei
 Scrum
+Transaktionsanalyse
+Express
+openAPI
+swagger
+Clean Code
+json-api
+CSS
+HTML
 
 AWS
+SCSS
+Kafka
+Selenium
+Redpanda
+Figma
+Sketch
 Cloudformation
 ECS
 EC2
+Deno
+Nest.js
 Docker
 webpack
 MySQL
+PostgreSQL
 IntelliJ
 expressjs
 Mongoose
 nginx
-Elastic Search
+Caddy
+Elastic
+Dropwizard
+Vue.js
+Angular
+JUnit
+Mockito
+SoapUI
+Debian
+Ubuntu
+macOS
+Groovy
+JPA
+Hibernate
+VS Code
+Cucumber
+Gherkin
+XML
+XSD
+XSLT
+WSS
+JSON Schema
+Parcel
+Go
+JIRA
+Confluence
+git
+Jest
+JAX-RS
+resteasy
+HTTP
+HTTP2
+MongoDB
+Gitlab CI
+
+Android
+Quarkus
+Svelte
+Rocket
+axum
+KNX
+ETS
+Inkscape
+Sublime
+Github Actions
+JNI
+Vaadin
+JSF
