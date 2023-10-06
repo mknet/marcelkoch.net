@@ -1,181 +1,105 @@
-
-
 contact-form {
 
 
-    display: block;
-    background-color: white;
-    padding: 1.4rem 0 0 0;
+  display: block;
+  background-color: white;
+  padding: 1.4rem 0 0 0;
 
-    fieldset {
-      padding: 2em 1.4rem 2em 0;
+  fieldset {
+    padding: 2em 1.4rem 2em 0;
+  }
+
+  fieldset legend,
+  mk-textarea label {
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 500;
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: Asap;
+    height: 2.2em;
+    border-radius: 4px;
+    border-color: var(--dark-purple-50);
+    border-width: 1px;
+    font-size: 1em;
+    border-style: solid;
+    position: relative;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: var(--dark-purple-50);
+      font-size: .6em;
+      text-align: right;
+      line-height: 20px;
     }
 
-    fieldset legend, mk-textarea label {
-      font-family: 'Asap Condensed', sans-serif;
-      font-weight: 500;
+    &::-ms-input-placeholder {
+      color: var(--dark-purple-50);
+      font-size: 11px;
+      text-align: right;
+      line-height: 20px;
     }
 
-    input, select, textarea {
-        font-family: Asap;
-        height: 2.2em;
-        border-radius: 4px;
-        border-color: var(--dark-purple-50);
-        border-width: 1px;
-        font-size: 1em;
-        border-style: solid;
-        position: relative;
-        box-sizing: border-box;
+    &:focus {
+      border-color: var(--orange);
+      outline: auto;
+      outline-color: var(--orange);
+      box-shadow: none;
 
-        &::placeholder {
-            color: var(--dark-purple-50);
-            font-size: .6em;
-            text-align: right;
-            line-height: 20px;
-        }
-
-        &::-ms-input-placeholder {
-          color: var(--dark-purple-50);
-          font-size: 11px;
-          text-align: right;
-          line-height: 20px;
-      }
-
-        &:focus {
-          border-color: var(--orange);
-          outline: auto;
-          outline-color: var(--orange);
-          box-shadow: none;
-
-          &::placeholder {
-            color: var(--dark-purple);
-          }
-        }
-    }
-
-    mk-textarea {
-      display: flex;
-      flex-grow: 4;
-      flex-flow: column;
-      font-size: 20px;
-
-      position: relative;
-
-      label {
-        position: absolute;
-        top: .8em;
-        left: .5rem;
-        font-weight: bold;
+      &::placeholder {
         color: var(--dark-purple);
-        z-index: 1;
-        font-size: 1.5rem;
-
-        font-size: 16px;
-        line-height: 1;
       }
+    }
+  }
 
-      textarea {
-        margin-top: 2.3em;
-        resize: none;
-      }
+  mk-textarea {
+    display: flex;
+    flex-grow: 4;
+    flex-flow: column;
+    font-size: 20px;
 
-      textarea::placeholder {
-        font-size: 16px;
-        text-align: right;
-      }
+    position: relative;
 
-      textarea:focus::placeholder {
-        transform: translateY(0);
-        color: transparent;
+    label {
+      position: absolute;
+      top: .8em;
+      left: .5rem;
+      font-weight: bold;
+      color: var(--dark-purple);
+      z-index: 1;
+      font-size: 1.5rem;
 
-        transition: transform 0.2s, font-size 0.2s;
-        font-size: 20px;
-        
-      }
-    
-      textarea:placeholder-shown + label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-weight: 400;
-    
-        transition: background-color 0.2s, color 0.2s,
-          top 0.2s,
-          bottom 0.2s,
-          right 0.2s,
-          left 0.2s;
-      }
-    
-      textarea:focus + label, textarea:not(:placeholder-shown) + label {
-        line-height: 1em;
-        font-weight: bold;
-        color: var(--dark-purple);
-
-        top: 26px;
-        left: .5rem;
-        font-size: 20px;
-        font-family: Asap, sans-serif;
-      }
+      font-size: 16px;
+      line-height: 1;
     }
 
     textarea {
-        padding: .5em;
-
-        min-height: 190px;
-
-        resize: vertical;
-
-        &::placeholder {
-            font: inherit;
-            text-align: left;
-        }
+      margin-top: 2.3em;
+      resize: none;
     }
 
-    input {
-      padding: .2em .5em;
-    }
-}
-
-contact-form form {
-    display: flex;
-    flex-flow: column wrap;
-    max-height: 342px;
-    padding: 1em 15vw;
-
-    &:invalid input[type=submit] {
-      background-color: var(--orange-50);
-      content: "Bitte alle Felder ausfüllen";
+    textarea::placeholder {
+      font-size: 16px;
+      text-align: right;
     }
 
-}
+    textarea:focus::placeholder {
+      transform: translateY(0);
+      color: transparent;
 
-mk-input {
-    display: block;
-    position: relative;
-    padding: 0 0 1.4em 0;
-    font-size: 20px;
+      transition: transform 0.2s, font-size 0.2s;
+      font-size: 20px;
 
-    flex-grow: 1;
-  
-    datalist {
-      background-color: #BF4A1F;
     }
 
-    label {
+    textarea:placeholder-shown+label {
+      position: absolute;
       top: 0;
-      position: absolute;
-      left: .5rem;
-      line-height: 1em;
-      font-weight: bold;
-      color: var(--dark-purple);
-    }
-  
-    input:placeholder-shown + label {
-      position: absolute;
-      left: .5rem;
-      line-height: 2.2em;
-      font-weight: normal;
-  
+      left: 0;
+      font-weight: 400;
+
       transition: background-color 0.2s, color 0.2s,
         top 0.2s,
         bottom 0.2s,
@@ -183,35 +107,114 @@ mk-input {
         left 0.2s;
     }
 
-    input:required + label {
-      font-weight: 700;
-    }
-
-    input:not(:placeholder-shown) {
-      border-color: var(--green);
-    }
-  
-    input:focus + label, input:not(:placeholder-shown) + label {
-      top: -1em;
-      left: .5rem;
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label {
       line-height: 1em;
       font-weight: bold;
       color: var(--dark-purple);
-    }
 
-    input {
-      width: 100%;
+      top: 26px;
+      left: .5rem;
+      font-size: 20px;
+      font-family: Asap, sans-serif;
     }
-
-    &.submit {
-      margin: 1.4em 0 0 0;
-    }
-  
   }
 
-  input[type=submit] {
-    background-color: var(--orange);
-    color: white;
+  textarea {
+    padding: .5em;
+
+    min-height: 190px;
+
+    resize: vertical;
+
+    &::placeholder {
+      font: inherit;
+      text-align: left;
+    }
+  }
+
+  input {
+    padding: .2em .5em;
+  }
+}
+
+contact-form form {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 342px;
+  padding: 1em 15vw;
+
+  &:invalid input[type=submit] {
+    background-color: var(--orange-50);
+    content: "Bitte alle Felder ausfüllen";
+  }
+
+}
+
+mk-input {
+  display: block;
+  position: relative;
+  padding: 0 0 1.4em 0;
+  font-size: 20px;
+
+  flex-grow: 1;
+
+  datalist {
+    background-color: #BF4A1F;
+  }
+
+  label {
+    top: 0;
+    position: absolute;
+    left: .5rem;
+    line-height: 1em;
     font-weight: bold;
-    margin: 0;
+    color: var(--dark-purple);
   }
+
+  input:placeholder-shown+label {
+    position: absolute;
+    left: .5rem;
+    line-height: 2.2em;
+    font-weight: normal;
+
+    transition: background-color 0.2s, color 0.2s,
+      top 0.2s,
+      bottom 0.2s,
+      right 0.2s,
+      left 0.2s;
+  }
+
+  input:required+label {
+    font-weight: 700;
+  }
+
+  input:not(:placeholder-shown) {
+    border-color: var(--green);
+  }
+
+  input:focus+label,
+  input:not(:placeholder-shown)+label {
+    top: -1em;
+    left: .5rem;
+    line-height: 1em;
+    font-weight: bold;
+    color: var(--dark-purple);
+  }
+
+  input {
+    width: 100%;
+  }
+
+  &.submit {
+    margin: 1.4em 0 0 0;
+  }
+
+}
+
+input[type=submit] {
+  background-color: var(--orange);
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
