@@ -88,8 +88,10 @@ body {
   grid-template-areas:
   "header header header"
   "stage stage stage"
-  ". methods ."
+  ". leistungen ."
   "quote quote quote"
+  ". methoden ."
+  "meinung meinung meinung"
   "footer footer footer";
 
   > div:nth-of-type(1) {
