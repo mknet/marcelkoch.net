@@ -90,8 +90,10 @@ body {
   "stage stage stage"
   ". leistungen ."
   "quote quote quote"
+  "quote3 quote3 quote3"
   ". methoden ."
   "meinung meinung meinung"
+  "kontakt kontakt kontakt"
   "footer footer footer";
 
   > div:nth-of-type(1) {
@@ -343,6 +345,10 @@ body > footer {
 
   a:link {
     color: var(--beige);
+  }
+
+  svg {
+    display:none;
   }
 }
 
