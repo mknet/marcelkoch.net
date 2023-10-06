@@ -27,7 +27,7 @@
     "jest": "^28.1.3",
     "jest-extended": "^3.0.1",
     "parcel": "^2.6.2",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.31",
     "posthtml-include": "^1.7.4",
     "posthtml-link-noreferrer": "^1.0.10",
     "sass": "^1.53.0",
