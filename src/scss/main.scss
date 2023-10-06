@@ -368,7 +368,7 @@ body > footer {
     border-radius: 6px;
 
     &:hover {
-      background-color: var(--orange);
+      // background-color: var(--orange);
 
       ul a:link {
         color: var(--beige);
@@ -403,22 +403,13 @@ body > footer {
 
       li {
         margin-bottom: .3em;
-      }
-
-      a {
         font-weight: 400;
-        margin-bottom: .7em;
       }
     }
 
     a:not(.main-link) {
       position: relative;
       z-index: 1;
-    }
-
-    .main-link {
-      display: block;
-      margin-top: 1.4rem;
     }
 
     .main-link::before{
@@ -453,6 +444,8 @@ body > footer {
       font-weight: normal;
       align-self: end;
       margin: 0;
+      display: block;
+      margin-top: 1.4rem;
     }
   }
 }
