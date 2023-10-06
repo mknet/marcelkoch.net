@@ -8,6 +8,10 @@ contact-form {
     font-weight: 500;
   }
 
+  fieldset legend {
+    margin: 0 0 1.8rem 0;
+  }
+
   input,
   select,
   textarea {
@@ -56,6 +60,10 @@ contact-form {
     datalist {
       background-color: #BF4A1F;
     }
+
+    input {
+      width: 100%;
+    }
   
     label {
       top: 0;
@@ -100,22 +108,44 @@ contact-form {
 
   mk-textarea {
     font-size: 20px;
+    position: relative;
+
+    width: 100%;
+    min-height: 10rem;
+    display: block;
+    padding: 2.8rem 0 0 0;
+
+    label {
+      font-weight: bold;
+      color: var(--dark-purple);
+      font-size: 1rem;
+    }
 
     label {
       position: absolute;
-      top: .8em;
-      left: .5rem;
-      font-weight: bold;
-      color: var(--dark-purple);
+      top: 0;
+      left: 0;
       z-index: 1;
-      font-size: 1.5rem;
-
-      font-size: 16px;
       line-height: 1;
     }
 
+    textarea:placeholder-shown+label {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label {
+      top: 26px;
+      left: .5rem;
+      font-size: 20px;
+    }
+
     textarea {
-      resize: none;
+      resize: vertical;
+      min-height: 6em;
+      width: 100%
     }
 
     textarea::placeholder {
@@ -133,9 +163,6 @@ contact-form {
     }
 
     textarea:placeholder-shown+label {
-      position: absolute;
-      top: 0;
-      left: 0;
       font-weight: 400;
 
       transition: background-color 0.2s, color 0.2s,
@@ -150,10 +177,7 @@ contact-form {
       line-height: 1em;
       font-weight: bold;
       color: var(--dark-purple);
-
-      top: 26px;
-      left: .5rem;
-      font-size: 20px;
+      font-size: 1.2rem;
       font-family: Asap, sans-serif;
     }
   }
@@ -169,7 +193,10 @@ contact-form {
     }
   }
 
-  form {  
+  form {
+
+    padding: 1.6rem;
+
     &:invalid input[type=submit] {
       background-color: var(--orange-50);
       content: "Bitte alle Felder ausfüllen";
@@ -183,8 +210,16 @@ contact-form {
     margin: 0;
   }
 
+  input {
+    padding: .2em .5em;
+  }
+
   @include xl {
     padding: 1.4rem 0 0 0;
+
+    fieldset legend {
+      margin: 0;
+    }
 
     fieldset {
       padding: 2em 1.4rem 2em 0;
@@ -192,10 +227,6 @@ contact-form {
 
     mk-input {
       flex-grow: 1;
-
-      input {
-        width: 100%;
-      }
     
       &.submit {
         margin: 1.4em 0 0 0;
@@ -206,16 +237,25 @@ contact-form {
       display: flex;
       flex-grow: 4;
       flex-flow: column;
-      position: relative;
-    }
+      width: auto;
+      padding: 0;
 
-    textarea {
-      margin-top: 2.3em;
-      min-height: 190px;
-    }
 
-    input {
-      padding: .2em .5em;
+      label {
+        top: .8em;
+        left: .5rem;
+      }
+
+      textarea:focus+label,
+      textarea:not(:placeholder-shown)+label {
+        top: 26px;
+      }
+
+      textarea {
+        margin-top: 2.3em;
+        min-height: 190px;
+        resize: none;
+      }
     }
 
     form {
