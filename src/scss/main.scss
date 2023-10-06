@@ -7,6 +7,7 @@
 @import "variables";
 
 :root {
+  --dark-dark-purple: #270042;
   --dark-purple: #410B66;
   --dark-purple-50: rgba(65, 11, 102, 0.5);
   --orange: #BF4A1F;
@@ -194,7 +195,7 @@ body > header {
   .flip-content {
     &.cookiebar {
       display: flex;
-      color: var(--dark-purple);
+      color: var(--dark-dark-purple);
       padding: .5rem;
       align-items: center;
       flex-wrap: wrap;
