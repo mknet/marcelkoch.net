@@ -369,17 +369,18 @@ body > footer {
   grid-area: leistungen;
   margin-bottom: 2rem;
 
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
   h2 {
     font-weight: normal;
     font-size: 40px;
     margin: 2em 0 1em 0;
     text-align: center;
   }
-
-  > div {
-    display: flex;
-    gap: 6%;
-  } 
 
   section {
     background-color: var(--dark-purple);
@@ -405,8 +406,7 @@ body > footer {
 
     display: flex;
     flex-direction: column-reverse;
-    padding: 19px;
-    width: 27%;
+    padding: 1rem;
 
     justify-content: space-between;
     align-items: flex-start;
@@ -417,7 +417,7 @@ body > footer {
       padding: 0;
       margin: 0;
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
 
       li {
         margin-bottom: .3em;
@@ -458,12 +458,30 @@ body > footer {
 
     h3, > a {
       color: var(--beige);
-      font-size: 60px;
+      font-size: 42;
       font-weight: normal;
       align-self: end;
       margin: 0;
       display: block;
       margin-top: 1.4rem;
+    }
+  }
+
+  @include xl {
+    > div {
+      gap: 6%;
+      flex-direction: row;
+    }
+
+    section {
+      font-size: 60px;
+
+      padding: 19px;
+      width: 27%;
+
+      ul {
+        font-size: 1.3rem;
+      }
     }
   }
 }
