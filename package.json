@@ -7,7 +7,7 @@
     "start": "parcel src/html/kommunikation.html",
     "start:home": "parcel src/html/index.html",
     "test": "npm run build",
-    "build": "parcel build --no-cache src/html/kommunikation.html",
+    "build": "parcel build --no-cache src/html/index.html",
     "setup": "npm i & selenium-standalone install",
     "deploy": "ts-node scripts/ts/deploy/index.ts"
   },
