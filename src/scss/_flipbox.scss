@@ -84,8 +84,15 @@ $dividedPerspective: calc($perspective / 2);
     z-index: 1;
     background-color: $bg-color-front;
     transform: rotateY(0deg) translateZ($dividedPerspective);
-    padding: 0 40px;
+    padding: 0 10px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    @include xl {
+      padding: 0 40px;
+      display: block;
+    }
   }
 
   .back {
