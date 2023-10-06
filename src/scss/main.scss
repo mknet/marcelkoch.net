@@ -349,6 +349,14 @@ body > footer {
 .mklogo {
   fill: white;
   margin-top: -9px;
+
+  width: 110px;
+  height: 14px;
+
+  @include xl {
+    width: 252px;
+    height: 76px;
+  }
 }
 
 #leistungen {
