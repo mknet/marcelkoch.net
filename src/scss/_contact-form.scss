@@ -1,25 +1,19 @@
-legend {
-  display: table;
-  padding: 0;
-}
-fieldset {
-  border: 0;
-  margin: 0;
-  min-width: 0;
-  padding: 0.01em 0 0 0;
-}
-body:not(:-moz-handler-blocked) fieldset {
-  display: table-cell;
-}
+
 
 contact-form {
 
 
     display: block;
     background-color: white;
+    padding: 1.4rem 0 0 0;
 
     fieldset {
       padding: 2em 1.4rem 2em 0;
+    }
+
+    fieldset legend, mk-textarea label {
+      font-family: 'Asap Condensed', sans-serif;
+      font-weight: 500;
     }
 
     input, select, textarea {
@@ -86,23 +80,24 @@ contact-form {
       }
 
       textarea::placeholder {
-        transform: translateY(3em);
         font-size: 16px;
+        text-align: right;
       }
 
       textarea:focus::placeholder {
         transform: translateY(0);
-        color: var(--dark-purple-50);
+        color: transparent;
 
         transition: transform 0.2s, font-size 0.2s;
         font-size: 20px;
+        
       }
     
       textarea:placeholder-shown + label {
         position: absolute;
         top: 0;
         left: 0;
-        font-weight: normal;
+        font-weight: 400;
     
         transition: background-color 0.2s, color 0.2s,
           top 0.2s,
@@ -119,13 +114,14 @@ contact-form {
         top: 26px;
         left: .5rem;
         font-size: 20px;
+        font-family: Asap, sans-serif;
       }
     }
 
     textarea {
         padding: .5em;
 
-        min-height: 192px;
+        min-height: 190px;
 
         resize: vertical;
 
@@ -185,6 +181,10 @@ mk-input {
         bottom 0.2s,
         right 0.2s,
         left 0.2s;
+    }
+
+    input:required + label {
+      font-weight: 700;
     }
 
     input:not(:placeholder-shown) {

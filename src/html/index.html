@@ -125,7 +125,11 @@
             <label for="contact-name">Name</label>
           </mk-input>
           <mk-input>
-            <input required type="text" name="phone" id="contact-phone" placeholder="z.B. 069 / 123"/>
+            <input required type="email" name="email" id="contact-email" placeholder="z.B. mk@example.org"/>
+            <label for="contact-email">E-Mail</label>
+          </mk-input>
+          <mk-input>
+            <input type="text" name="phone" id="contact-phone" placeholder="z.B. 069 / 123"/>
             <label for="contact-phone">Telefon</label>
           </mk-input>
           <mk-input>
@@ -138,7 +142,11 @@
           </mk-input>
           </fieldset>
           <mk-textarea>
-            <textarea required id="contact-subject" placeholder="Hallo Herr Koch, ..."></textarea>
+            <textarea required id="contact-subject" placeholder="Sie reichten Weine mir und Bier
+und Schnäpse und dergleichen.
+Dabei könn'n diese Leute mir
+nicht mal das Wasser reichen!
+-- Heinz Erhardt"></textarea>
             <label for="contact-subject">Ihre Nachricht</label>
           </mk-textarea>
           <mk-input class="submit"><input type="submit" value="Abschicken"></mk-input>
