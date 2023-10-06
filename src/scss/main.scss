@@ -18,6 +18,8 @@
   --font: 'Asap', Helvetica, Verdana, sans-serif;
   --text-color: black;
   --light-purple: #8D4CB9;
+  --mint: #4c90a0;
+  --mint-dark: #046F88;
 
   font-size: 16px;
 }
@@ -510,7 +512,7 @@ body > footer {
       p {
         padding: 0;
         margin: 0;
-        color: $darker-purple;
+        color: var(--mint-dark);
         font-weight: bold;
       }
     }
