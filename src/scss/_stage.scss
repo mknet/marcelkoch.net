@@ -76,6 +76,7 @@
   #photo {
     grid-column: 4;
     grid-row: 3/span 2;
+    align-self: self-end;
 
     @include xl {
       grid-column: 2 / span 2;
