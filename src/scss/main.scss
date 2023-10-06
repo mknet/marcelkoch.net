@@ -569,7 +569,6 @@ body > footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 5rem;
 
   h2 {
     text-align: center;
@@ -580,7 +579,7 @@ body > footer {
 
   blockquote {
     font-style: italic;
-    max-width: 50vw;
+
     line-height: 1.6em;
 
     footer {
@@ -588,6 +587,14 @@ body > footer {
       font-weight: 500;
       font-size: 1.3rem;
       margin-top: 1rem;
+    }
+  }
+
+  @include xl {
+    padding: 5rem;
+
+    blockquote {
+      max-width: 50vw;
     }
   }
 }
