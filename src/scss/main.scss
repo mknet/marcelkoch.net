@@ -154,7 +154,7 @@ body > p:last-of-type {
   background: $darkest-green;
   grid-area: quote2;
   display: none;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
 
   @include xl {
     display: block;
@@ -169,7 +169,7 @@ body > p {
   font-size: .9rem;
 
   @include xl {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -410,7 +410,7 @@ body > footer {
 
 #leistungen {
   grid-area: leistungen;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 
   > div {
     display: flex;
@@ -421,7 +421,7 @@ body > footer {
   h2 {
     font-weight: normal;
     font-size: 40px;
-    margin: 2em 0 1em 0;
+    margin: 5rem 0 1em 0;
     text-align: center;
   }
 
@@ -531,7 +531,7 @@ body > footer {
 
 #projekte {
   grid-area: methoden;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 
   display: flex;
   align-items: center;
@@ -548,7 +548,7 @@ body > footer {
   h2 {
     font-weight: normal;
     font-size: 40px;
-    margin: 2em 0 1em 0;
+    margin: 5rem 0 1em 0;
     text-align: center;
   }
 
@@ -607,7 +607,7 @@ body > footer {
   grid-area: meinung;
   background-color: #4C90A0;
   color: white;
-  padding: 2rem;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -644,7 +644,8 @@ body > footer {
 
 #kontakt {
   grid-area: kontakt;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 
   &:target {
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -656,7 +657,7 @@ body > footer {
   h2 {
     font-weight: normal;
     font-size: 40px;
-    margin: 2em 0 1em 0;
+    margin: 0 0 1em 0;
     text-align: center;
   }
 
