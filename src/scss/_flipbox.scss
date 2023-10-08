@@ -36,27 +36,40 @@ $dividedPerspective: calc($perspective / 2);
 }
 
 
-@keyframes slideInFromLeft {
 
-  0% {
-    transform: translateZ(-$dividedPerspective) rotateX(0deg);
-  }
-  50% {
-    transform: translateZ(-$dividedPerspective) rotateX(180deg);
-  }
-  100% {
-    transform: translateZ(-$dividedPerspective) rotateX(0deg);
-  }
-}
 
 // flip box
 
 .flip-box {
+
+  --box-height: 67px;
+  --perspective: 50px;
+  
+  @include xl {
+    --box-height: 100px;
+  }
+  
+  --divided-perspective: calc(var(--perspective) / 2);
+
+  @keyframes slideInFromLeft {
+
+    0% {
+      transform: translateZ(-var(--divided-perspective)) rotateX(0deg);
+    }
+    50% {
+      transform: translateZ(-var(--divided-perspective)) rotateX(180deg);
+    }
+    100% {
+      transform: translateZ(-var(--divided-perspective)) rotateX(0deg);
+    }
+  }
+
+
   float: left;
   display: block;
   position: relative;
   z-index: 2;
-  height: $box-height;
+  height: var(--box-height);
   perspective: 400px;
 
   .object {
@@ -66,13 +79,13 @@ $dividedPerspective: calc($perspective / 2);
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     transform-style: preserve-3d;
-    transform: translateZ(-$dividedPerspective);
+    transform: translateZ(calc(0px - var(--divided-perspective)));
 
     &.cookie-bar {
       transition-property: transform;
       transition-duration: 2.5s;
       transition-timing-function: ease-in-out;
-      transform: translateZ(-$dividedPerspective) rotateY(180deg);
+      transform: translateZ(calc(0px - var(--divided-perspective))) rotateY(180deg);
     }
 
 
@@ -83,7 +96,7 @@ $dividedPerspective: calc($perspective / 2);
     @extend .slice;
     z-index: 1;
     background-color: $bg-color-front;
-    transform: rotateY(0deg) translateZ($dividedPerspective);
+    transform: rotateY(0deg) translateZ(var(--divided-perspective));
     padding: 0 10px;
     box-sizing: border-box;
     display: flex;
@@ -100,13 +113,13 @@ $dividedPerspective: calc($perspective / 2);
     @extend .slice;
     z-index: 0;
     background-color: $bg-color-back;
-    transform: rotateY(180deg) translateZ($dividedPerspective);
+    transform: rotateY(180deg) translateZ(var(--divided-perspective));
   }
 
   .flank {
     @extend .slice;
     width: $perspective;
-    height: $box-height;
+    height: var(--box-height);
     left: 250px;
     background-color: $bg-color-flank;
     transform: rotateY(-90deg) translateZ(50vw);
@@ -127,21 +140,21 @@ $dividedPerspective: calc($perspective / 2);
       // animation-iteration-count: infinite;
 
       &.cookie-bar {
-        transform: translateZ(-$dividedPerspective) rotateX(180deg);
+        transform: translateZ(calc(0px - var(--divided-perspective))) rotateX(180deg);
       }
 
     }
 
     .back {
-      transform: rotateX(180deg) translateZ($dividedPerspective);
+      transform: rotateX(180deg) translateZ(var(--divided-perspective));
     }
 
     .flank {
       width: 100%;
       height: $perspective;
       left: 0;
-      top: calc(($box-height - $perspective) / 2 );
-      transform: rotateX(-90deg) translateZ(calc($box-height / 2));
+      top: calc((var(--box-height) - var(--perspective)) / 2 );
+      transform: rotateX(-90deg) translateZ(calc(var(--box-height) / 2));
     }
 
   }
