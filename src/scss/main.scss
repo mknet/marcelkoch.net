@@ -127,9 +127,16 @@ body > p:first-of-type {
   grid-area: quote;
   background: $almost-black-purple;
 
-  @include xl {
+  span {
+    display: none;
+  }
 
+  @include xl {
     margin: 0;
+
+    span {
+      display: inline;
+    }
   }
 }
 
@@ -159,7 +166,11 @@ body > p {
   display: block;
   text-align: center;
   padding: 1em;
-  font-size: 1.5rem;
+  font-size: .9rem;
+
+  @include xl {
+    font-size: 1.5rem;
+  }
 }
 
 body > header {

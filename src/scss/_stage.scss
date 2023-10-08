@@ -92,9 +92,9 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0;
-    color: var(--dark-purple);
+    color: var(--dark-dark-purple);
 
     @include xl {
       font-size: 21px;
@@ -102,19 +102,20 @@
   }
 
   ul {
-    display: flex;
     flex-direction: column;
     list-style: none;
     padding: 0;
     color: var(--dark-dark-purple);
     font-size: 24px;
     line-height: 1.2;
+    display: none;
 
     margin-block-start: 4rem;
 
     @include xl {
       justify-content: center;
       padding: 0;
+      display: flex;
     }
 
   }
@@ -128,7 +129,7 @@
   }
 
   nav {
-    font-size: 18px;
+    font-size: 14px;
     margin-block-start: 4rem;
 
     span {
@@ -165,6 +166,10 @@
         margin: 0 1rem 0 0;
       }
     }
+
+    @include xl {
+      font-size: 18px;
+    }
   }
 
   img {
@@ -180,8 +185,8 @@
 }
 
 h1 {
-  font-size: 31px;
-  color: var(--dark-purple);
+  font-size: 32px;
+  color: var(--dark-dark-purple);
   margin:0;
   font-weight: bold;
 
