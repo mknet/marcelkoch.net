@@ -7,8 +7,14 @@
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr 156px;
-  grid-template-rows: 1fr 1fr 151px 66px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas:
+  "header header"
+  "button photo"
+  ". photo";
+
   overflow: hidden;
   margin-top: 24px;
 
