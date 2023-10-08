@@ -183,8 +183,11 @@ body > header {
 
     display: flex;
     align-items: start;
-    flex-direction: column;
     row-gap: 10px;
+
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
 
     &.cookiebar {
       display: flex;
@@ -192,23 +195,39 @@ body > header {
       padding: .5rem;
       align-items: center;
       flex-wrap: wrap;
+      width: auto;
+      align-items: center;
+      height: 100%;
+      box-sizing: border-box;
+
+
 
       @include xl {
         padding: 0 1rem;
         flex-wrap: initial;
       }
 
+    img {
+      display: none;
+
+      @include xl {
+        display: unset;
+      }
+    }
+
     h2 {
       font-size: 24px;
+
       @include xl {
         font-size: 39px;
       }
     }
 
     p {
-      font-size: 15px;
+      display: none;
       @include xl {
         font-size: 24px;
+        display: unset;
       }
     }
 
@@ -218,7 +237,6 @@ body > header {
 
     header {
       flex-grow: 2;
-      width: 213px;
       @include xl {
         width: unset;
       }
@@ -232,7 +250,6 @@ body > header {
       color: white;
       background: transparent;
       border: 3px solid white;
-      margin-right: 1rem;
       font-size: 15px;
       padding:0;
 
@@ -240,6 +257,7 @@ body > header {
         font-size: 18px;
         width: 60px;
         height: 48px;
+        margin-right: 1rem;
       }
 
       &:focus, &:active {
@@ -321,14 +339,15 @@ body > header {
   }
 
   .front p {
+    font-size: 0.75rem;
+    grid-area: claim;
+    text-align: right;
+    margin-left: auto;
 
     @include xl {
       font-size: 26px;
     }
 
-    font-size: 0.8rem;
-    grid-area: claim;
-    text-align: right;
   }
 }
 
@@ -367,8 +386,9 @@ body > footer {
 .mklogo {
   fill: white;
 
-  width: 198px;
-  height: 36px;
+  width: 141px;
+  height: 25px;
+  margin-top: -8px;
 
   @include xl {
     width: 252px;
