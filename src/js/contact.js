@@ -22,7 +22,7 @@ xhr.onload = function () {
 // Create and send a GET request
 // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
-xhr.open('POST', 'https://svc.marcelkoch.net/mailer/');
+xhr.open('POST', '/contact-request');
 xhr.setRequestHeader("Content-type", "application/json");
 
 const jsonToSend = {
