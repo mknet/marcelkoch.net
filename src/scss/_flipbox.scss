@@ -140,7 +140,7 @@ $dividedPerspective: calc($perspective / 2);
       // animation-iteration-count: infinite;
 
       &.cookie-bar {
-        transform: translateZ(calc(0px - var(--divided-perspective))) rotateX(180deg);
+        transform: translateZ(calc(0px - var(--divided-perspective))) rotateX(180.5deg);
       }
 
     }
@@ -154,7 +154,7 @@ $dividedPerspective: calc($perspective / 2);
       height: $perspective;
       left: 0;
       top: calc((var(--box-height) - var(--perspective)) / 2 );
-      transform: rotateX(-90deg) translateZ(calc(var(--box-height) / 2));
+      transform: rotateX(-89deg) translateZ(calc(var(--box-height) / 2));
     }
 
   }
