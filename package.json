@@ -4,8 +4,8 @@
   "description": "marcelkoch.net, Version of 2019",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel src/html/kommunikation.html",
-    "start:home": "parcel src/html/index.html",
+    "start": "parcel --no-cache src/html/kommunikation.html",
+    "start:home": "parcel --no-cache src/html/index.html",
     "test": "npm run build",
     "build": "parcel build --no-cache src/html/index.html",
     "setup": "npm i & selenium-standalone install",
