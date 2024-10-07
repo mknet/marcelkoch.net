@@ -138,6 +138,11 @@ body > p:first-of-type {
       display: inline;
     }
   }
+
+  a:link, a:visited {
+    background-color: var(--orange);
+    color: white;
+  }
 }
 
 body > p:nth-of-type(2) {
@@ -366,7 +371,7 @@ body > footer {
   grid-area: footer;
   background: #270042;
   color: var(--beige);
-  padding: 0 12px;
+  padding: 2rem 12px;
 
   h2 {
     display: none;
@@ -374,6 +379,10 @@ body > footer {
 
   nav {
     text-align: right;
+
+    @include xl {
+      margin-top: 3rem;
+    }
   }
 
   ul {
@@ -385,12 +394,16 @@ body > footer {
     margin-left: 1rem;
   }
 
-  a:link {
+  a:link, a:visited {
     color: var(--beige);
   }
 
   svg {
     display:none;
+
+    @include xl {
+      display: block;
+    }
   }
 }
 

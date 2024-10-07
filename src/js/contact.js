@@ -1,35 +1,57 @@
-const sendInfoRequest = (sender) => {
+const sendInfoRequest = (submitter) => {
 
-// Set up our HTTP request
-var xhr = new XMLHttpRequest();
+	const form = document.querySelector("form");
+	const formData = new FormData(form, submitter);
+	
+	const req = new XMLHttpRequest();
+	
+	req.addEventListener("progress", updateProgress);
+	req.addEventListener("load", transferComplete);
+	req.addEventListener("error", transferFailed);
+	req.addEventListener("abort", transferFailed);
 
-// Setup our listener to process completed requests
-xhr.onload = function () {
+	function updateProgress(evt) {
+		submitter.classList.add("progress");
+		submitter.value = "Wird verschickt ..."
+	}
+	
+	
+	function transferComplete(evt) {
 
-	// Process our return data
-	if (xhr.status >= 200 && xhr.status < 300) {
-		// What do when the request is successful
-		console.log('success!', xhr);
-	} else {
-		// What do when the request fails
-		console.log('The request failed!');
+		if (req.status >= 200 && req.status < 300) {
+			// What do when the request is successful
+			console.log('success!', req);
+
+			submitter.classList.add("success");
+			submitter.classList.remove("progress");
+			submitter.value = "Erfolgreich verschickt."
+            submitter.disabled = true
+		} else {
+			// What do when the request fails
+			console.log('The request failed!');
+
+			submitter.classList.add("error");
+			submitter.classList.remove("progress");
+			submitter.value = "Fehler! Bitte noch mal!"
+
+			setTimeout(() => {
+				submitter.classList.remove("error");
+				submitter.value = "Noch mal abschicken"
+			}, 3000)
+		}
+
+		// Code that should run regardless of the request status
+		console.log('Onload done');
+	}
+	
+	
+	function transferFailed(evt) {
+		submitter.classList.add("error");
+		submitter.value = "Fehler! Bitte noch mal."
 	}
 
-	// Code that should run regardless of the request status
-	console.log('Onload done');
-};
-
-// Create and send a GET request
-// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
-// The second argument is the endpoint URL
-xhr.open('POST', '/contact-request');
-xhr.setRequestHeader("Content-type", "application/json");
-
-const jsonToSend = {
-	"sender_address": sender,
-	"message": "Ich hätte gerne Informationen zu Kommunikation"
-}
-xhr.send(JSON.stringify(jsonToSend));
+req.open("POST", "/contact-request");
+req.send(formData);
 
 }
 export default sendInfoRequest

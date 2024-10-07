@@ -209,6 +209,19 @@ contact-form {
     font-weight: bold;
     margin: 0;
   }
+  input.progress[type=submit] {
+    background-color: var(--dark-purple);
+  }
+
+  input.success[type=submit] {
+    background-color: var(--mint);
+  }
+
+  input.error[type=submit] {
+    background-color: red;
+  }
+
+
 
   input {
     padding: .2em .5em;

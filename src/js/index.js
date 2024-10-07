@@ -85,5 +85,5 @@ moreSections.forEach(moreSection => {
 const formElement = document.querySelector('form');
 formElement.addEventListener('submit', (e) => {
   e.preventDefault();
-  sendInfoRequest(formElement.elements[0].value);
+  sendInfoRequest(e.target.querySelector("input[type=submit]"));
 })
