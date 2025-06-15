@@ -91,7 +91,7 @@ body {
   "quote quote quote"
   ". aktuelle-themen ."
   "quote3 quote3 quote3"
-  ". methoden ."
+  ". projekte ."
   "meinung meinung meinung"
   "kontakt kontakt kontakt"
   "footer footer footer";
@@ -115,7 +115,7 @@ body {
     "quote quote quote quote quote"
     ". aktuelle-themen aktuelle-themen aktuelle-themen ."
     "quote3 quote3 quote3 quote3 quote3"
-    ". . methoden . ."
+    ". . projekte . ."
     "meinung meinung meinung meinung meinung"
     "quote2 quote2 quote2 quote2 quote2 "
     ". kontakt kontakt kontakt ."
@@ -543,7 +543,7 @@ body > footer {
 }
 
 #projekte {
-  grid-area: methoden;
+  grid-area: projekte;
   margin-bottom: 5rem;
 
   display: flex;
