@@ -89,7 +89,7 @@ body {
   "header header header"
   "stage stage stage"
   "quote quote quote"
-  ". leistungen ."
+  ". aktuelle-themen ."
   "quote3 quote3 quote3"
   ". methoden ."
   "meinung meinung meinung"
@@ -113,7 +113,7 @@ body {
     "header header header header header"
     ". stage stage stage ."
     "quote quote quote quote quote"
-    ". leistungen leistungen leistungen ."
+    ". aktuelle-themen aktuelle-themen aktuelle-themen ."
     "quote3 quote3 quote3 quote3 quote3"
     ". . methoden . ."
     "meinung meinung meinung meinung meinung"
@@ -421,8 +421,8 @@ body > footer {
   }
 }
 
-#leistungen {
-  grid-area: leistungen;
+#aktuelle-themen {
+  grid-area: aktuelle-themen;
   margin-bottom: 5rem;
 
   > div {
