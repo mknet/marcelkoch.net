@@ -148,20 +148,20 @@
       padding: 0;
       color: var(--green);
       font-size: 21px;
-  
+
       margin-block-start: 6rem;
-  
+
       @include xl {
         justify-content: start;
         padding: 0;
         flex-direction: row;
       }
-  
+
     }
-  
+
     li {
       margin-bottom: 20px;
-  
+
       @include xl {
         margin: 0 1rem 0 0;
       }
@@ -175,11 +175,11 @@
   img {
     display: block;
     width: 171px;
-    height: 151px;
+    height: 161px;
 
     @include xl {
-      width: 318px;
-      height: 281px;
+      width: 325px;
+      height: 306px;
     }
   }
 }
